@@ -1,4 +1,4 @@
-# Full-Stack Authentication Template
+# <h1 aligh="center">Full-Stack Authentication Template</h2> 
 
 <div align="center">
   <p><strong>A production-ready authentication system built with clean architecture principles and modern technologies</strong></p>
