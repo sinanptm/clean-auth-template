@@ -1,27 +1,35 @@
 # Full-Stack Authentication Template
 
-> A production-ready authentication system built with clean architecture principles and modern technologies
+<div align="center">
+  <p><strong>A production-ready authentication system built with clean architecture principles and modern technologies</strong></p>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+</div>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+---
 
-## Overview
+## 📖 Overview
 
 This is a comprehensive full-stack authentication template designed with clean architecture principles. It provides a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
-### Live Demo
-🌐 **Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
+**Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
 
-### Preview
-![Application Preview](https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203)
+<img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" />
 
-## Key Features
+---
 
+## ✨ Key Features
+
+<table>
+  <tr>
+    <td width="50%">
+      
 ### 🏗️ Architecture & Design
 - **Clean Architecture** - Domain-driven design with clear separation of concerns
-- **Modular Structure** - Easy to extend and maintain
+- **Modular Structure** - Easy to extend and maintain  
 - **Framework Independence** - Core business logic is decoupled from frameworks
 - **TypeScript First** - Full type safety across the entire stack
 
@@ -32,6 +40,9 @@ This is a comprehensive full-stack authentication template designed with clean a
 - **JWT Token Management** - Secure access and refresh token implementation
 - **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
 
+    </td>
+    <td width="50%">
+      
 ### ⚡ Modern Technology Stack
 - **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
 - **Backend**: Express.js 5, Node.js, TypeScript
@@ -46,7 +57,13 @@ This is a comprehensive full-stack authentication template designed with clean a
 - **Deployment Ready** - Production-optimized builds
 - **CI/CD Pipeline** - Automated testing, building, and quality checks
 
-## Technology Stack
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Technology Stack
 
 | Category | Technologies |
 |----------|-------------|
@@ -59,7 +76,9 @@ This is a comprehensive full-stack authentication template designed with clean a
 | **Security** | bcrypt, CORS, Rate Limiting, Joi Validation |
 | **CI/CD** | GitHub Actions, Automated Testing, Code Quality Checks |
 
-## Architecture
+---
+
+## 🏛️ Architecture
 
 ### Clean Architecture Benefits
 - **Separation of Concerns**: Each layer has a single responsibility
@@ -67,7 +86,9 @@ This is a comprehensive full-stack authentication template designed with clean a
 - **Testability**: Business logic is framework-independent
 - **Maintainability**: Easy to modify and extend features
 
-### Authentication Flow
+<details>
+<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+
 ```mermaid
 graph TB
     %% Entry Point
@@ -159,7 +180,11 @@ graph TB
     style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
 ```
 
-## CI/CD Pipeline
+</details>
+
+---
+
+## 🔧 CI/CD Pipeline
 
 ### 🔄 Automated Workflows
 - **Continuous Integration** - Automated testing and building on every push
@@ -181,7 +206,9 @@ graph TB
 - **Artifact Management** - Build artifacts stored for deployment
 - **Multi-stage Validation** - Tests, linting, and type checking
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js v22 or higher
@@ -189,79 +216,85 @@ graph TB
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
 
-### Installation
+<details>
+<summary><strong>📥 Installation Guide</strong></summary>
 
-1. **Clone the repository**
-   ```bash
-   git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
-   cd fullstack-clean-auth-template
-   ```
+### 1. Clone the repository
+```bash
+git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
+cd fullstack-clean-auth-template
+```
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
+### 2. Install dependencies
+```bash
+pnpm install
+```
 
-3. **Environment Configuration**
+### 3. Environment Configuration
 
-   Create `.env` file in the `server/` directory:
-   ```env
-   # Database
-   MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
-   
-   # Server Configuration
-   PORT=8000
-   NODE_ENV=development
-   
-   # JWT Secrets
-   ACCESS_TOKEN_SECRET=your-super-secure-access-token-secret
-   REFRESH_TOKEN_SECRET=your-super-secure-refresh-token-secret
-   
-   # Email Configuration (for OTP)
-   SENDER_EMAIL=your-email@example.com
-   NODEMAILER_PASSKEY=your-email-app-password
-   
-   # Company Information
-   COMPANY_NAME=Your Company Name
-   COMPANY_DOMAIN=yourcompany.com
-   
-   # Admin Credentials
-   ADMIN_MAIL=admin@yourcompany.com
-   ADMIN_PASSWORD=your-secure-admin-password
-   
-   # Firebase Admin SDK
-   FIREBASE_PROJECT_ID=your-firebase-project-id
-   FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
-   FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n"
-   ```
+Create `.env` file in the `server/` directory:
+```env
+# Database
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
 
-   Create `.env.local` file in the `web/` directory:
-   ```env
-   # API Configuration
-   NEXT_PUBLIC_SERVER_URL=http://localhost:8000
-   
-   # Firebase Client Configuration
-   NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-   ```
+# Server Configuration
+PORT=8000
+NODE_ENV=development
 
-4. **Start Development Servers**
-   ```bash
-   # Start both frontend and backend
-   pnpm dev
-   
-   # Or start individually
-   pnpm --prefix server dev    # Backend: http://localhost:8000
-   pnpm --prefix web dev       # Frontend: http://localhost:3000
-   ```
+# JWT Secrets
+ACCESS_TOKEN_SECRET=your-super-secure-access-token-secret
+REFRESH_TOKEN_SECRET=your-super-secure-refresh-token-secret
 
-## API Documentation
+# Email Configuration (for OTP)
+SENDER_EMAIL=your-email@example.com
+NODEMAILER_PASSKEY=your-email-app-password
 
-### Authentication Endpoints
+# Company Information
+COMPANY_NAME=Your Company Name
+COMPANY_DOMAIN=yourcompany.com
+
+# Admin Credentials
+ADMIN_MAIL=admin@yourcompany.com
+ADMIN_PASSWORD=your-secure-admin-password
+
+# Firebase Admin SDK
+FIREBASE_PROJECT_ID=your-firebase-project-id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n"
+```
+
+Create `.env.local` file in the `web/` directory:
+```env
+# API Configuration
+NEXT_PUBLIC_SERVER_URL=http://localhost:8000
+
+# Firebase Client Configuration
+NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
+```
+
+### 4. Start Development Servers
+```bash
+# Start both frontend and backend
+pnpm dev
+
+# Or start individually
+pnpm --prefix server dev    # Backend: http://localhost:8000
+pnpm --prefix web dev       # Frontend: http://localhost:3000
+```
+
+</details>
+
+---
+
+## 📚 API Documentation
+
+<details>
+<summary><strong>🔐 Authentication Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
@@ -274,14 +307,20 @@ graph TB
 | `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
 | `POST` | `/api/auth/logout` | User logout | - |
 
-### User Endpoints
+</details>
+
+<details>
+<summary><strong>👤 User Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
 | `GET` | `/api/user/profile` | Get user profile | ✅ User |
 | `PUT` | `/api/user/profile` | Update user profile | ✅ User |
 
-### Admin Endpoints
+</details>
+
+<details>
+<summary><strong>👑 Admin Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
@@ -292,7 +331,11 @@ graph TB
 | `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
 | `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
 
-## Security Features
+</details>
+
+---
+
+## 🔒 Security Features
 
 ### 🔐 Authentication Security
 - **JWT Tokens**: Secure access and refresh token implementation
@@ -316,7 +359,9 @@ graph TB
 - **Error Tracking**: Comprehensive error handling
 - **Security Headers**: Helmet.js security headers
 
-## Development
+---
+
+## 💻 Development
 
 ### Available Scripts
 
@@ -343,9 +388,12 @@ pnpm start        # Start production server
 pnpm lint         # Lint frontend code
 ```
 
-## Deployment
+---
 
-### Production Checklist
+## 🚀 Deployment
+
+<details>
+<summary><strong>✅ Production Checklist</strong></summary>
 
 - [ ] Environment variables configured for production
 - [ ] MongoDB Atlas connection established
@@ -358,12 +406,26 @@ pnpm lint         # Lint frontend code
 - [ ] Monitoring and logging setup
 - [ ] Backup strategy implemented
 
-### Deployment Options
+</details>
+
+<details>
+<summary><strong>🌐 Deployment Options</strong></summary>
 
 #### Vercel (Frontend)
 1. Connect your GitHub repository to Vercel
 2. Configure environment variables in Vercel dashboard
 3. Deploy with automatic CI/CD
+
+#### Railway/Render (Backend)
+1. Connect your GitHub repository
+2. Configure environment variables
+3. Set up automatic deployments
+
+</details>
+
+---
+
+## 🤝 Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
@@ -393,7 +455,9 @@ If you find a bug or have a feature request, please open an issue with:
 - Expected vs actual behavior
 - System information (OS, Node.js version, etc.)
 
-## License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -406,7 +470,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Support
+## 📞 Support
 
 - 📚 **Documentation**: [Full Documentation](https://full-stack-clean-auth-template.vercel.app/)
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sinanptm/fullstack-clean-auth-template/issues)
@@ -416,12 +480,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ If this project helped you, please consider giving it a star!**
+### ⭐ Star this repository if it helped you!
 
 [![GitHub stars](https://img.shields.io/github/stars/sinanptm/fullstack-clean-auth-template?style=social)](https://github.com/sinanptm/fullstack-clean-auth-template)
 
-*Built with ❤️ by the open source community*
-
-</div>
+**Built with ❤️ for the developer community**
 
 </div>
