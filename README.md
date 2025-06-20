@@ -25,10 +25,10 @@ The template demonstrates modern web development practices with a focus on secur
 
 ---
 
-## 📱 Application Screenshots
-
 <details>
-<summary><strong>🖼️ View Application Interface</strong></summary>
+<summary><strong>
+## 📱 Application Screenshots
+</strong></summary>
 
 ### Authentication Flow
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
