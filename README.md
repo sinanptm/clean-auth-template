@@ -38,7 +38,7 @@ npm install -g clean-auth
 
 **Create a New Project**
 ```bash
-# **OR Use npx (Without Installing Globally)**
+# OR Use npx (Without Installing Globally)
 # Run commands without installing the CLI globally
 npx clean-auth init my-auth-project --i
 cd my-auth-project
@@ -46,7 +46,7 @@ cd my-auth-project
 
 **Configure Authentication**
 ```bash
-clean-auth auth-config [[options]](https://github.com/sinanptm/fullstack-clean-auth-template/tree/clean-auth-cli?tab=readme-ov-file#auth-config---configure-authentication)
+clean-auth auth-config [options]
 ```
 
 **Start Development**
@@ -56,7 +56,7 @@ pnpm dev
 
 ### Alternative
 
-If you prefer to set up the project manually without installing the CLI globally:
+If you prefer to set up the project manually without using CLI:
 
  **Clone the repository**
 ```bash
@@ -73,6 +73,14 @@ pnpm install
 ```bash
 pnpm dev
 ```
+---
+
+## 💻 Prerequisites
+- Node.js v20 or higher
+- pnpm v10.8.1 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- Firebase project with Authentication enabled
+
 ---
 
 <details>
@@ -292,14 +300,6 @@ graph TB
 </details>
 
 ___
-
-## 💻 Prerequisites
-- Node.js v20 or higher
-- pnpm v10.8.1 or higher
-- MongoDB (local installation or MongoDB Atlas)
-- Firebase project with Authentication enabled
-
----
 
 <details>
 <summary><strong>
