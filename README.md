@@ -69,9 +69,12 @@ cd fullstack-clean-auth-template
 ```bash
 pnpm install
 ```
-3. **Configure Authentication**
+3. **Environment Configuration**
+    - Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
+
+**Start Development**
 ```bash
-clean-auth auth-config
+pnpm dev
 ```
 ---
 
