@@ -116,6 +116,45 @@ The template demonstrates modern web development practices with a focus on secur
 
 </details>
 
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v22 or higher
+- pnpm v10.8.1 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- Firebase project with Authentication enabled
+
+### 📥 Installation Guide
+
+#### 1. Clone the repository
+```bash
+git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
+cd fullstack-clean-auth-template
+```
+
+#### 2. Install dependencies
+```bash
+pnpm install
+```
+
+#### 3. Environment Configuration
+Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
+
+#### 4. Start Development Servers
+```bash
+# Start both frontend and backend
+pnpm dev
+
+# Or start individually
+pnpm --prefix server dev    # Backend: http://localhost:8000
+pnpm --prefix web dev       # Frontend: http://localhost:3000
+```
+
+---
+
+
 ---
 
 ## 🛠️ Technology Stack
@@ -164,42 +203,6 @@ The template demonstrates modern web development practices with a focus on secur
 - **Caching Strategy** - Optimized build times with dependency caching
 - **Artifact Management** - Build artifacts stored for deployment
 - **Multi-stage Validation** - Tests, linting, and type checking
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js v22 or higher
-- pnpm v10.8.1 or higher
-- MongoDB (local installation or MongoDB Atlas)
-- Firebase project with Authentication enabled
-
-### 📥 Installation Guide
-
-#### 1. Clone the repository
-```bash
-git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
-cd fullstack-clean-auth-template
-```
-
-#### 2. Install dependencies
-```bash
-pnpm install
-```
-
-#### 3. Environment Configuration
-Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
-
-#### 4. Start Development Servers
-```bash
-# Start both frontend and backend
-pnpm dev
-
-# Or start individually
-pnpm --prefix server dev    # Backend: http://localhost:8000
-pnpm --prefix web dev       # Frontend: http://localhost:3000
-```
 
 ---
 
