@@ -32,34 +32,59 @@ The template demonstrates modern web development practices with a focus on secur
 
 The fastest way to get started is using our CLI tool:
 
-### Install the CLI
+**Install the CLI**
 ```bash
 npm install -g clean-auth
 ```
 
-### Create a New Project
+**Create a New Project**
 ```bash
 clean-auth init my-auth-project --install
 cd my-auth-project
 ```
 
-### Configure Authentication
+**Configure Authentication**
 ```bash
 clean-auth auth-config
 ```
 
-### Start Development
+**Start Development**
 ```bash
 pnpm dev
 ```
 
-That's it! Your authentication system is ready at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:8000
+### Alternative: Manual Setup
 
+If you prefer to set up the project manually without using the CLI tool:
+
+#### Prerequisites
+- Node.js v20 or higher
+- pnpm v10.8.1 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- Firebase project with Authentication enabled
+
+#### 📥 Installation Guide
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/sinanptm/fullstack-clean-auth-template.git
+cd fullstack-clean-auth-template
+```
+
+2. **Install dependencies**
+```bash
+pnpm install
+```
+3. **Configure Authentication**
+```bash
+clean-auth auth-config
+```
 ---
 
-## 🛠️ CLI Commands
+<details>
+<summary><strong>
+🛠️ CLI Commands
+</strong></summary> 
 
 The **clean-auth** CLI provides powerful commands to scaffold and manage your authentication project:
 
@@ -121,7 +146,7 @@ clean-auth help
 clean-auth --help
 clean-auth init --help
 ```
-
+<details>
 ---
 
 <details>
