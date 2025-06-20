@@ -121,7 +121,7 @@ The template demonstrates modern web development practices with a focus on secur
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v22 or higher
+- Node.js v20 or higher
 - pnpm v10.8.1 or higher
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
@@ -151,9 +151,6 @@ pnpm dev
 pnpm --prefix server dev    # Backend: http://localhost:8000
 pnpm --prefix web dev       # Frontend: http://localhost:3000
 ```
-
----
-
 
 ---
 
@@ -305,26 +302,6 @@ pnpm build        # Build for production
 pnpm start        # Start production server
 pnpm lint         # Lint frontend code
 ```
-
----
-
-## 🚀 Deployment
-
-<details>
-<summary><strong>✅ Production Checklist</strong></summary>
-
-- [ ] Environment variables configured for production
-- [ ] MongoDB Atlas connection established
-- [ ] Firebase production project configured
-- [ ] Admin credentials secured
-- [ ] CORS origins updated for production domains
-- [ ] Rate limiting configured appropriately
-- [ ] SSL certificates installed
-- [ ] Domain DNS configured
-- [ ] Monitoring and logging setup
-- [ ] Backup strategy implemented
-
-</details>
 
 ---
 
