@@ -7,6 +7,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![npm version](https://img.shields.io/npm/v/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
+[![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 </div>
@@ -17,11 +19,131 @@
 
 This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
-**📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
+**📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/) <br />
+**📚 CLI Package**: [https://www.npmjs.com/package/clean-auth](https://www.npmjs.com/package/clean-auth)
 
 <img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
 The template demonstrates modern web development practices with a focus on security, scalability, and maintainability. It includes comprehensive authentication flows, role-based access control, and production-ready deployment configurations.
+
+---
+
+## 🚀 Quick Start with CLI
+
+The fastest way to get started is using our CLI tool:
+
+**Install the CLI**
+```bash
+npm install -g clean-auth
+```
+
+**Create a New Project**
+```bash
+clean-auth init my-auth-project --install
+cd my-auth-project
+```
+
+**Configure Authentication**
+```bash
+clean-auth auth-config
+```
+
+**Start Development**
+```bash
+pnpm dev
+```
+
+### Alternative
+
+If you prefer to set up the project manually without installing the CLI globally:
+
+#### 📥 Installation Guide
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/sinanptm/fullstack-clean-auth-template.git
+cd fullstack-clean-auth-template
+```
+
+2. **Install dependencies**
+```bash
+pnpm install
+```
+3. **Environment Configuration**
+   ##### Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
+
+**Start Development**
+```bash
+pnpm dev
+```
+---
+
+<details>
+<summary><strong>
+🛠️ CLI Commands
+</strong></summary> 
+
+The **clean-auth** CLI provides powerful commands to scaffold and manage your authentication project:
+
+### `init` - Initialize Project
+Create a new full-stack authentication project with clean architecture.
+
+```bash
+clean-auth init <project-name> [options]
+```
+
+**Options:**
+- `-i, --install` - Automatically install dependencies after project creation
+
+**Examples:**
+```bash
+clean-auth init my-auth-project
+clean-auth init my-auth-project --install
+```
+
+### `auth-config` - Configure Authentication
+Set up environment variables and authentication configuration interactively.
+
+```bash
+clean-auth auth-config [options]
+```
+
+**Options:**
+- `-s, --skip` - Skip interactive prompts and use default values
+
+**Examples:**
+```bash
+clean-auth auth-config
+clean-auth auth-config --skip
+```
+
+### `clean` - Clean Project Structure
+Remove unnecessary parts of your project structure to customize it for your needs.
+
+```bash
+clean-auth clean [options]
+```
+
+**Options:**
+- `-s, --server` - Remove entire server directory and update root configurations
+- `-w, --web` - Remove entire web directory and update root configurations  
+- `-o, --opensource` - Remove open source files (LICENSE, CONTRIBUTING.md, README.md)
+
+**Examples:**
+```bash
+clean-auth clean --server
+clean-auth clean --web --opensource
+```
+
+### `help` - Show All Commands
+Display a list of all available commands.
+
+```bash
+clean-auth help
+clean-auth --help
+clean-auth init --help
+```
+</details>
 
 ---
 
@@ -174,41 +296,11 @@ graph TB
 
 ___
 
-## 🚀 Getting Started
-
-### Prerequisites
+## 💻 Prerequisites
 - Node.js v20 or higher
 - pnpm v10.8.1 or higher
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
-
-### 📥 Installation Guide
-
-#### 1. Clone the repository
-```bash
-git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
-cd fullstack-clean-auth-template
-```
-
-#### 2. Install dependencies
-```bash
-pnpm install
-```
-
-#### 3. Environment Configuration
-Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
-
-#### 4. Start Development Servers
-```bash
-# Start both frontend and backend
-pnpm dev
-
-# Or start individually
-pnpm --prefix server dev    # Backend: http://localhost:8000
-pnpm --prefix web dev       # Frontend: http://localhost:3000
-```
-
----
 
 ## 🏛️ Architecture
 
@@ -396,6 +488,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 📚 **Documentation**: [Full Documentation](https://full-stack-clean-auth-template.vercel.app/)
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sinanptm/fullstack-clean-auth-template/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/sinanptm/fullstack-clean-auth-template/discussions)
+- 📦 **NPM Package**: [clean-auth CLI](https://www.npmjs.com/package/clean-auth)
 
 ---
 
