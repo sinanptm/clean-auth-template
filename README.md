@@ -1,73 +1,75 @@
+<div align="center">
+
 # Full-Stack Authentication Template
 
-> A production-ready authentication system built with clean architecture principles and modern technologies
+**A production-ready authentication system built with clean architecture principles and modern technologies**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-## Overview
+</div>
 
-This is a comprehensive full-stack authentication template designed with clean architecture principles. It provides a solid foundation for building scalable web applications with robust user authentication and authorization systems.
+---
 
-### Live Demo
-🌐 **Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
+## 📖 Overview
 
-### Preview
-![Application Preview](https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203)
+This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
-## Key Features
+**📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
 
-### 🏗️ Architecture & Design
-- **Clean Architecture** - Domain-driven design with clear separation of concerns
-- **Modular Structure** - Easy to extend and maintain
-- **Framework Independence** - Core business logic is decoupled from frameworks
-- **TypeScript First** - Full type safety across the entire stack
+<img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
-### 🔐 Authentication & Security
-- **Multi-factor Authentication** - Email/Password with OTP verification
-- **OAuth Integration** - Google and GitHub social login
-- **Role-based Access Control** - User and admin roles with protected routes
-- **JWT Token Management** - Secure access and refresh token implementation
-- **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
+The template demonstrates modern web development practices with a focus on security, scalability, and maintainability. It includes comprehensive authentication flows, role-based access control, and production-ready deployment configurations.
 
-### ⚡ Modern Technology Stack
-- **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
-- **Backend**: Express.js 5, Node.js, TypeScript
-- **Database**: MongoDB with Mongoose ODM
-- **State Management**: Zustand + React Query
-- **Authentication**: Firebase OAuth, JWT, Nodemailer
+---
 
-### 🚀 Production Ready
-- **Scalable Architecture** - Built for enterprise-level applications
-- **Comprehensive Testing** - Unit and integration tests included
-- **Development Tools** - ESLint, Prettier, Hot reload
-- **Deployment Ready** - Production-optimized builds
-- **CI/CD Pipeline** - Automated testing, building, and quality checks
-
-## Technology Stack
-
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI |
-| **Backend** | Express.js 5, Node.js, TypeScript |
-| **Database** | MongoDB, Mongoose ODM |
-| **Authentication** | JWT, Firebase Auth, Nodemailer |
-| **State Management** | Zustand, React Query |
-| **Development** | ESLint, Prettier, Jest |
-| **Security** | bcrypt, CORS, Rate Limiting, Joi Validation |
-| **CI/CD** | GitHub Actions, Automated Testing, Code Quality Checks |
-
-## Architecture
-
-### Clean Architecture Benefits
-- **Separation of Concerns**: Each layer has a single responsibility
-- **Dependency Inversion**: Abstractions don't depend on concrete implementations  
-- **Testability**: Business logic is framework-independent
-- **Maintainability**: Easy to modify and extend features
+<details>
+<summary><strong>
+📱 Application Screenshots
+</strong></summary>
 
 ### Authentication Flow
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+
+**User Registration**
+<img src="https://github.com/user-attachments/assets/a91bfc8b-ebf1-46f9-b783-1382f09489b3" alt="User Signup Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Forgot Password Modal**
+<img src="https://github.com/user-attachments/assets/c427b1fd-53d6-4cff-a5c3-9633e3056716" alt="Forgot Password Popup" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Password Reset Email**
+<img src="https://github.com/user-attachments/assets/b41320de-8cb2-4e5d-930b-061cfc608b1b" alt="Forgot Password Email" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**OTP Verification**
+<img src="https://github.com/user-attachments/assets/31797b3a-6ead-4d2c-a23a-549e907da59f" alt="OTP Verification Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**OTP Email Verification**
+<img src="https://github.com/user-attachments/assets/af435d9a-9c70-4083-948d-2927fb7e87ac" alt="OTP Verification Email" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+</div>
+
+### User & Admin Interfaces
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+
+**User Profile Dashboard**
+<img src="https://github.com/user-attachments/assets/3c8aa0bb-f406-4e9a-8efa-eeda59fffbbc" alt="User Profile Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Admin Login**
+<img src="https://github.com/user-attachments/assets/793bd7a9-5b01-4285-bbe0-a644fa6dffdb" alt="Admin Signin Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Admin Dashboard**
+<img src="https://github.com/user-attachments/assets/c2e5edef-db7d-488b-8c2e-9c7c1d331f69" alt="Admin Dashboard" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+</div>
+
+</details>
+
+---
+<details>
+<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+
 ```mermaid
 graph TB
     %% Entry Point
@@ -132,34 +134,93 @@ graph TB
     PP --> QQ["🍪 Set Admin Cookies"]
     QQ --> RR["✨ Authenticated Admin"]
     RR --> SS["👑 Admin Panel Access"]
-
-    %% Styling with Black Text
-    style A fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#000000
-    style BB fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#000000
-    style RR fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#000000
-    style L fill:#e0e7ff,stroke:#6366f1,stroke-width:2px,color:#000000
-    style M fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#000000
-    style CC fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
-    style SS fill:#fef7ff,stroke:#a855f7,stroke-width:2px,color:#000000
-
-    %% Error States with Black Text
-    style E fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style Q fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style W fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style NN fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-
-    %% Additional Key Nodes with Black Text
-    style B fill:#f3f4f6,stroke:#6b7280,stroke-width:2px,color:#000000
-    style D fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style J fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style P fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style V fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style X fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style MM fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
 ```
 
-## CI/CD Pipeline
+</details>
+
+---
+
+<details>
+<summary><strong>✨ Key Features</strong></summary>
+
+### 🏗️ Architecture & Design
+- **Clean Architecture** - Domain-driven design with clear separation of concerns
+- **Modular Structure** - Easy to extend and maintain  
+- **Framework Independence** - Core business logic is decoupled from frameworks
+- **TypeScript First** - Full type safety across the entire stack
+
+### 🔐 Authentication & Security
+- **Multi-factor Authentication** - Email/Password with OTP verification
+- **OAuth Integration** - Google and GitHub social login
+- **Role-based Access Control** - User and admin roles with protected routes
+- **JWT Token Management** - Secure access and refresh token implementation
+- **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
+
+### ⚡ Modern Technology Stack
+- **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
+- **Backend**: Express.js 5, Node.js, TypeScript
+- **Database**: MongoDB with Mongoose ODM
+- **State Management**: Zustand + React Query
+- **Authentication**: Firebase OAuth, JWT, Nodemailer
+
+### 🚀 Production Ready
+- **Scalable Architecture** - Built for enterprise-level applications
+- **Comprehensive Testing** - Unit and integration tests included
+- **Development Tools** - ESLint, Prettier, Hot reload
+- **Deployment Ready** - Production-optimized builds
+- **CI/CD Pipeline** - Automated testing, building, and quality checks
+
+</details>
+
+___
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v20 or higher
+- pnpm v10.8.1 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- Firebase project with Authentication enabled
+
+### 📥 Installation Guide
+
+#### 1. Clone the repository
+```bash
+git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
+cd fullstack-clean-auth-template
+```
+
+#### 2. Install dependencies
+```bash
+pnpm install
+```
+
+#### 3. Environment Configuration
+Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
+
+#### 4. Start Development Servers
+```bash
+# Start both frontend and backend
+pnpm dev
+
+# Or start individually
+pnpm --prefix server dev    # Backend: http://localhost:8000
+pnpm --prefix web dev       # Frontend: http://localhost:3000
+```
+
+---
+
+## 🏛️ Architecture
+
+### Clean Architecture Benefits
+- **Separation of Concerns**: Each layer has a single responsibility
+- **Dependency Inversion**: Abstractions don't depend on concrete implementations  
+- **Testability**: Business logic is framework-independent
+- **Maintainability**: Easy to modify and extend features
+
+---
+
+## 🔧 CI/CD Pipeline
 
 ### 🔄 Automated Workflows
 - **Continuous Integration** - Automated testing and building on every push
@@ -181,87 +242,12 @@ graph TB
 - **Artifact Management** - Build artifacts stored for deployment
 - **Multi-stage Validation** - Tests, linting, and type checking
 
-## Getting Started
+---
 
-### Prerequisites
-- Node.js v22 or higher
-- pnpm v10.8.1 or higher
-- MongoDB (local installation or MongoDB Atlas)
-- Firebase project with Authentication enabled
+## 📚 API Documentation
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
-   cd fullstack-clean-auth-template
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
-
-3. **Environment Configuration**
-
-   Create `.env` file in the `server/` directory:
-   ```env
-   # Database
-   MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
-   
-   # Server Configuration
-   PORT=8000
-   NODE_ENV=development
-   
-   # JWT Secrets
-   ACCESS_TOKEN_SECRET=your-super-secure-access-token-secret
-   REFRESH_TOKEN_SECRET=your-super-secure-refresh-token-secret
-   
-   # Email Configuration (for OTP)
-   SENDER_EMAIL=your-email@example.com
-   NODEMAILER_PASSKEY=your-email-app-password
-   
-   # Company Information
-   COMPANY_NAME=Your Company Name
-   COMPANY_DOMAIN=yourcompany.com
-   
-   # Admin Credentials
-   ADMIN_MAIL=admin@yourcompany.com
-   ADMIN_PASSWORD=your-secure-admin-password
-   
-   # Firebase Admin SDK
-   FIREBASE_PROJECT_ID=your-firebase-project-id
-   FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
-   FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n"
-   ```
-
-   Create `.env.local` file in the `web/` directory:
-   ```env
-   # API Configuration
-   NEXT_PUBLIC_SERVER_URL=http://localhost:8000
-   
-   # Firebase Client Configuration
-   NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-   ```
-
-4. **Start Development Servers**
-   ```bash
-   # Start both frontend and backend
-   pnpm dev
-   
-   # Or start individually
-   pnpm --prefix server dev    # Backend: http://localhost:8000
-   pnpm --prefix web dev       # Frontend: http://localhost:3000
-   ```
-
-## API Documentation
-
-### Authentication Endpoints
+<details>
+<summary><strong>🔐 Authentication Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
@@ -274,14 +260,20 @@ graph TB
 | `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
 | `POST` | `/api/auth/logout` | User logout | - |
 
-### User Endpoints
+</details>
+
+<details>
+<summary><strong>👤 User Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
 | `GET` | `/api/user/profile` | Get user profile | ✅ User |
 | `PUT` | `/api/user/profile` | Update user profile | ✅ User |
 
-### Admin Endpoints
+</details>
+
+<details>
+<summary><strong>👑 Admin Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
@@ -292,7 +284,12 @@ graph TB
 | `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
 | `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
 
-## Security Features
+</details>
+
+---
+
+<details>
+<summary><strong>🔒 Security Features</strong></summary>
 
 ### 🔐 Authentication Security
 - **JWT Tokens**: Secure access and refresh token implementation
@@ -316,7 +313,11 @@ graph TB
 - **Error Tracking**: Comprehensive error handling
 - **Security Headers**: Helmet.js security headers
 
-## Development
+</details>
+
+---
+
+## 💻 Development
 
 ### Available Scripts
 
@@ -343,27 +344,9 @@ pnpm start        # Start production server
 pnpm lint         # Lint frontend code
 ```
 
-## Deployment
+---
 
-### Production Checklist
-
-- [ ] Environment variables configured for production
-- [ ] MongoDB Atlas connection established
-- [ ] Firebase production project configured
-- [ ] Admin credentials secured
-- [ ] CORS origins updated for production domains
-- [ ] Rate limiting configured appropriately
-- [ ] SSL certificates installed
-- [ ] Domain DNS configured
-- [ ] Monitoring and logging setup
-- [ ] Backup strategy implemented
-
-### Deployment Options
-
-#### Vercel (Frontend)
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy with automatic CI/CD
+## 🤝 Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
@@ -393,7 +376,9 @@ If you find a bug or have a feature request, please open an issue with:
 - Expected vs actual behavior
 - System information (OS, Node.js version, etc.)
 
-## License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -406,7 +391,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Support
+## 📞 Support
 
 - 📚 **Documentation**: [Full Documentation](https://full-stack-clean-auth-template.vercel.app/)
 - 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sinanptm/fullstack-clean-auth-template/issues)
@@ -416,12 +401,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ If this project helped you, please consider giving it a star!**
+### ⭐ Star this repository if it helped you!
 
 [![GitHub stars](https://img.shields.io/github/stars/sinanptm/fullstack-clean-auth-template?style=social)](https://github.com/sinanptm/fullstack-clean-auth-template)
 
-*Built with ❤️ by the open source community*
-
-</div>
+**Built with ❤️ for the developer community**
 
 </div>
