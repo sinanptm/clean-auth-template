@@ -177,28 +177,28 @@ The template demonstrates modern web development practices with a focus on secur
 ### 📥 Installation Guide
 
 #### 1. Clone the repository
-\`\`\`bash
+```bash
 git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
 cd fullstack-clean-auth-template
-\`\`\`
+```
 
 #### 2. Install dependencies
-\`\`\`bash
+```bash
 pnpm install
-\`\`\`
+```
 
 #### 3. Environment Configuration
-Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
+Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.web` and `.env.server` files in each directory for the complete list of required variables.
 
 #### 4. Start Development Servers
-\`\`\`bash
+```bash
 # Start both frontend and backend
 pnpm dev
 
 # Or start individually
 pnpm --prefix server dev    # Backend: http://localhost:8000
 pnpm --prefix web dev       # Frontend: http://localhost:3000
-\`\`\`
+```
 
 ---
 
@@ -280,27 +280,27 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 ### Available Scripts
 
 #### Root Level
-\`\`\`bash
+```bash
 pnpm dev          # Start both frontend and backend
 pnpm format       # Format code using Prettier
 pnpm lint         # Lint entire project
-\`\`\`
+```
 
 #### Backend (`server/`)
-\`\`\`bash
+```bash
 pnpm dev          # Start development server with hot reload
 pnpm build        # Build for production
 pnpm start        # Start production server
 pnpm test         # Run test suite
-\`\`\`
+```
 
 #### Frontend (`web/`)
-\`\`\`bash
+```bash
 pnpm dev          # Start Next.js development server
 pnpm build        # Build for production
 pnpm start        # Start production server
 pnpm lint         # Lint frontend code
-\`\`\`
+```
 
 ---
 
