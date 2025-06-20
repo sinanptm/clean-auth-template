@@ -82,6 +82,8 @@ The template demonstrates modern web development practices with a focus on secur
 
 </details>
 
+---
+
 <details>
 <summary><strong>✨ Key Features</strong></summary>
 
