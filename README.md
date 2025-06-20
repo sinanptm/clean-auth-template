@@ -333,8 +333,7 @@ ___
 
 ## 📚 API Documentation
 
-<details>
-<summary><strong>🔐 Authentication Endpoints</strong></summary>
+**🔐 Authentication Endpoints**
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
@@ -349,8 +348,7 @@ ___
 
 </details>
 
-<details>
-<summary><strong>👤 User Endpoints</strong></summary>
+**👤 User Endpoints**
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
@@ -359,8 +357,7 @@ ___
 
 </details>
 
-<details>
-<summary><strong>👑 Admin Endpoints</strong></summary>
+**👑 Admin Endpoints**
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
