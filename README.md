@@ -146,7 +146,7 @@ clean-auth help
 clean-auth --help
 clean-auth init --help
 ```
-<details>
+</details>
 ---
 
 <details>
