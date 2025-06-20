@@ -57,8 +57,6 @@ pnpm dev
 
 If you prefer to set up the project manually without installing the CLI globally:
 
-#### 📥 Installation Guide
-
 1. **Clone the repository**
 ```bash
 git clone https://github.com/sinanptm/fullstack-clean-auth-template.git
@@ -302,17 +300,13 @@ ___
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
 
-## 🏛️ Architecture
-
-### Clean Architecture Benefits
-- **Separation of Concerns**: Each layer has a single responsibility
-- **Dependency Inversion**: Abstractions don't depend on concrete implementations  
-- **Testability**: Business logic is framework-independent
-- **Maintainability**: Easy to modify and extend features
-
 ---
 
-## 🔧 CI/CD Pipeline
+<details>
+<summary><strong>
+🔧 CI/CD Pipeline
+</strong></summary>
+
 
 ### 🔄 Automated Workflows
 - **Continuous Integration** - Automated testing and building on every push
@@ -334,6 +328,7 @@ ___
 - **Artifact Management** - Build artifacts stored for deployment
 - **Multi-stage Validation** - Tests, linting, and type checking
 
+</details>
 ---
 
 ## 📚 API Documentation
