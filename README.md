@@ -7,7 +7,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![npm version](https://img.shields.io/npm/v/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 [![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -68,7 +67,7 @@ cd fullstack-clean-auth-template
 pnpm install
 ```
 3. **Environment Configuration**
-   ##### Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
+##### Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
 
 **Start Development**
 ```bash
