@@ -154,7 +154,7 @@ The template demonstrates modern web development practices with a focus on secur
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
-| **CI/CD Pipeline** | Push to \`main\`/\`develop\`, PRs | Build, test, and quality checks |
+| **CI/CD Pipeline** | Push to `main`/`develop`, PRs | Build, test, and quality checks |
 | **Security Audit** | Weekly schedule, Push/PR | Vulnerability scanning |
 | **Update Dependencies** | Weekly schedule, Manual | Automated dependency updates |
 
@@ -174,68 +174,23 @@ The template demonstrates modern web development practices with a focus on secur
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
 
-<details>
-<summary><strong>📥 Installation Guide</strong></summary>
+### 📥 Installation Guide
 
-### 1. Clone the repository
+#### 1. Clone the repository
 \`\`\`bash
 git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
 cd fullstack-clean-auth-template
 \`\`\`
 
-### 2. Install dependencies
+#### 2. Install dependencies
 \`\`\`bash
 pnpm install
 \`\`\`
 
-### 3. Environment Configuration
+#### 3. Environment Configuration
+Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
 
-Create \`.env\` file in the \`server/\` directory:
-\`\`\`env
-# Database
-MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
-
-# Server Configuration
-PORT=8000
-NODE_ENV=development
-
-# JWT Secrets
-ACCESS_TOKEN_SECRET=your-super-secure-access-token-secret
-REFRESH_TOKEN_SECRET=your-super-secure-refresh-token-secret
-
-# Email Configuration (for OTP)
-SENDER_EMAIL=your-email@example.com
-NODEMAILER_PASSKEY=your-email-app-password
-
-# Company Information
-COMPANY_NAME=Your Company Name
-COMPANY_DOMAIN=yourcompany.com
-
-# Admin Credentials
-ADMIN_MAIL=admin@yourcompany.com
-ADMIN_PASSWORD=your-secure-admin-password
-
-# Firebase Admin SDK
-FIREBASE_PROJECT_ID=your-firebase-project-id
-FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
-FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\nYOUR_PRIVATE_KEY\\n-----END PRIVATE KEY-----\\n"
-\`\`\`
-
-Create \`.env.local\` file in the \`web/\` directory:
-\`\`\`env
-# API Configuration
-NEXT_PUBLIC_SERVER_URL=http://localhost:8000
-
-# Firebase Client Configuration
-NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-\`\`\`
-
-### 4. Start Development Servers
+#### 4. Start Development Servers
 \`\`\`bash
 # Start both frontend and backend
 pnpm dev
@@ -244,8 +199,6 @@ pnpm dev
 pnpm --prefix server dev    # Backend: http://localhost:8000
 pnpm --prefix web dev       # Frontend: http://localhost:3000
 \`\`\`
-
-</details>
 
 ---
 
@@ -256,14 +209,14 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
-| \`POST\` | \`/api/auth/signup\` | User registration | \`{ email, password, name }\` |
-| \`POST\` | \`/api/auth/signin\` | Email/password login | \`{ email, password }\` |
-| \`POST\` | \`/api/auth/verify-otp\` | Verify OTP code | \`{ email, otp }\` |
-| \`POST\` | \`/api/auth/oauth-2\` | OAuth authentication | \`{ firebaseToken }\` |
-| \`POST\` | \`/api/auth/forgot-password\` | Request password reset | \`{ email }\` |
-| \`POST\` | \`/api/auth/reset-password\` | Reset password with OTP | \`{ email, otp, newPassword }\` |
-| \`POST\` | \`/api/auth/refresh\` | Refresh access token | \`{ refreshToken }\` |
-| \`POST\` | \`/api/auth/logout\` | User logout | - |
+| `POST` | `/api/auth/signup` | User registration | `{ email, password, name }` |
+| `POST` | `/api/auth/signin` | Email/password login | `{ email, password }` |
+| `POST` | `/api/auth/verify-otp` | Verify OTP code | `{ email, otp }` |
+| `POST` | `/api/auth/oauth-2` | OAuth authentication | `{ firebaseToken }` |
+| `POST` | `/api/auth/forgot-password` | Request password reset | `{ email }` |
+| `POST` | `/api/auth/reset-password` | Reset password with OTP | `{ email, otp, newPassword }` |
+| `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
+| `POST` | `/api/auth/logout` | User logout | - |
 
 </details>
 
@@ -272,8 +225,8 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
-| \`GET\` | \`/api/user/profile\` | Get user profile | ✅ User |
-| \`PUT\` | \`/api/user/profile\` | Update user profile | ✅ User |
+| `GET` | `/api/user/profile` | Get user profile | ✅ User |
+| `PUT` | `/api/user/profile` | Update user profile | ✅ User |
 
 </details>
 
@@ -282,18 +235,19 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
-| \`POST\` | \`/api/admin/signin\` | Admin login | - |
-| \`GET\` | \`/api/admin/users\` | List all users | ✅ Admin |
-| \`GET\` | \`/api/admin/users/:id\` | Get specific user | ✅ Admin |
-| \`PUT\` | \`/api/admin/users/:id\` | Update user | ✅ Admin |
-| \`DELETE\` | \`/api/admin/users/:id\` | Delete user | ✅ Admin |
-| \`GET\` | \`/api/admin/analytics\` | System analytics | ✅ Admin |
+| `POST` | `/api/admin/signin` | Admin login | - |
+| `GET` | `/api/admin/users` | List all users | ✅ Admin |
+| `GET` | `/api/admin/users/:id` | Get specific user | ✅ Admin |
+| `PUT` | `/api/admin/users/:id` | Update user | ✅ Admin |
+| `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
+| `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
 
 </details>
 
 ---
 
-## 🔒 Security Features
+<details>
+<summary><strong>🔒 Security Features</strong></summary>
 
 ### 🔐 Authentication Security
 - **JWT Tokens**: Secure access and refresh token implementation
@@ -317,6 +271,8 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 - **Error Tracking**: Comprehensive error handling
 - **Security Headers**: Helmet.js security headers
 
+</details>
+
 ---
 
 ## 💻 Development
@@ -330,7 +286,7 @@ pnpm format       # Format code using Prettier
 pnpm lint         # Lint entire project
 \`\`\`
 
-#### Backend (\`server/\`)
+#### Backend (`server/`)
 \`\`\`bash
 pnpm dev          # Start development server with hot reload
 pnpm build        # Build for production
@@ -338,7 +294,7 @@ pnpm start        # Start production server
 pnpm test         # Run test suite
 \`\`\`
 
-#### Frontend (\`web/\`)
+#### Frontend (`web/`)
 \`\`\`bash
 pnpm dev          # Start Next.js development server
 pnpm build        # Build for production
@@ -390,11 +346,11 @@ We welcome contributions from the community! Here's how you can help:
 ### How to Contribute
 
 1. **Fork** the repository
-2. **Create** a feature branch (\`git checkout -b feature/amazing-feature\`)
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
 3. **Follow** the existing code style and architecture patterns
 4. **Add** tests for new functionality
-5. **Commit** your changes (\`git commit -m 'Add some amazing feature'\`)
-6. **Push** to the branch (\`git push origin feature/amazing-feature\`)
+5. **Commit** your changes (`git commit -m 'Add some amazing feature'`)
+6. **Push** to the branch (`git push origin feature/amazing-feature`)
 7. **Open** a Pull Request
 
 ### Development Guidelines
