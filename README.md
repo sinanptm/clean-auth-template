@@ -1,32 +1,32 @@
-# <h1 aligh="center">Full-Stack Authentication Template</h2> 
-
 <div align="center">
-  <p><strong>A production-ready authentication system built with clean architecture principles and modern technologies</strong></p>
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-  [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+# Full-Stack Authentication Template
+
+**A production-ready authentication system built with clean architecture principles and modern technologies**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 </div>
 
 ---
 
 ## 📖 Overview
 
-This is a comprehensive full-stack authentication template designed with clean architecture principles. It provides a solid foundation for building scalable web applications with robust user authentication and authorization systems.
+This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
-**Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
+**📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
 
-<img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" />
+<img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+The template demonstrates modern web development practices with a focus on security, scalability, and maintainability. It includes comprehensive authentication flows, role-based access control, and production-ready deployment configurations.
 
 ---
 
 ## ✨ Key Features
 
-<table>
-  <tr>
-    <td width="50%">
-      
 ### 🏗️ Architecture & Design
 - **Clean Architecture** - Domain-driven design with clear separation of concerns
 - **Modular Structure** - Easy to extend and maintain  
@@ -40,9 +40,6 @@ This is a comprehensive full-stack authentication template designed with clean a
 - **JWT Token Management** - Secure access and refresh token implementation
 - **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
 
-    </td>
-    <td width="50%">
-      
 ### ⚡ Modern Technology Stack
 - **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
 - **Backend**: Express.js 5, Node.js, TypeScript
@@ -56,10 +53,6 @@ This is a comprehensive full-stack authentication template designed with clean a
 - **Development Tools** - ESLint, Prettier, Hot reload
 - **Deployment Ready** - Production-optimized builds
 - **CI/CD Pipeline** - Automated testing, building, and quality checks
-
-    </td>
-  </tr>
-</table>
 
 ---
 
@@ -153,31 +146,6 @@ graph TB
     PP --> QQ["🍪 Set Admin Cookies"]
     QQ --> RR["✨ Authenticated Admin"]
     RR --> SS["👑 Admin Panel Access"]
-
-    %% Styling with Black Text
-    style A fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#000000
-    style BB fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#000000
-    style RR fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#000000
-    style L fill:#e0e7ff,stroke:#6366f1,stroke-width:2px,color:#000000
-    style M fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#000000
-    style CC fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
-    style SS fill:#fef7ff,stroke:#a855f7,stroke-width:2px,color:#000000
-
-    %% Error States with Black Text
-    style E fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style Q fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style W fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style NN fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-
-    %% Additional Key Nodes with Black Text
-    style B fill:#f3f4f6,stroke:#6b7280,stroke-width:2px,color:#000000
-    style D fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style J fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style P fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style V fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style X fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style MM fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
 ```
 
 </details>
@@ -260,7 +228,7 @@ ADMIN_PASSWORD=your-secure-admin-password
 # Firebase Admin SDK
 FIREBASE_PROJECT_ID=your-firebase-project-id
 FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
-FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n"
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\nYOUR_PRIVATE_KEY\\n-----END PRIVATE KEY-----\\n"
 ```
 
 Create `.env.local` file in the `web/` directory:
