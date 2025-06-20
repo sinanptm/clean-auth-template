@@ -347,7 +347,6 @@ ___
 | `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
 | `POST` | `/api/auth/logout` | User logout | - |
 
-</details>
 
 **👤 User Endpoints**
 
@@ -356,7 +355,6 @@ ___
 | `GET` | `/api/user/profile` | Get user profile | ✅ User |
 | `PUT` | `/api/user/profile` | Update user profile | ✅ User |
 
-</details>
 
 **👑 Admin Endpoints**
 
