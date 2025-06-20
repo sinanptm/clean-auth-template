@@ -27,7 +27,7 @@ The template demonstrates modern web development practices with a focus on secur
 
 <details>
 <summary><strong>
-## 📱 Application Screenshots
+📱 Application Screenshots
 </strong></summary>
 
 ### Authentication Flow
@@ -67,6 +67,20 @@ The template demonstrates modern web development practices with a focus on secur
 </details>
 
 ---
+<details>
+<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+
+> **📋 Coming Soon**: Detailed authentication flow diagram will be added here to visualize the complete user authentication process, including email/password login, OAuth integration, OTP verification, and admin authentication flows.
+>
+> The diagram will illustrate:
+> - User registration and login processes
+> - Multi-factor authentication with OTP
+> - OAuth integration with Google and GitHub
+> - Admin authentication workflow
+> - Token management and refresh cycles
+> - Password reset functionality
+
+</details>
 
 <details>
 <summary><strong>✨ Key Features</strong></summary>
@@ -124,21 +138,6 @@ The template demonstrates modern web development practices with a focus on secur
 - **Dependency Inversion**: Abstractions don't depend on concrete implementations  
 - **Testability**: Business logic is framework-independent
 - **Maintainability**: Easy to modify and extend features
-
-<details>
-<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
-
-> **📋 Coming Soon**: Detailed authentication flow diagram will be added here to visualize the complete user authentication process, including email/password login, OAuth integration, OTP verification, and admin authentication flows.
->
-> The diagram will illustrate:
-> - User registration and login processes
-> - Multi-factor authentication with OTP
-> - OAuth integration with Google and GitHub
-> - Admin authentication workflow
-> - Token management and refresh cycles
-> - Password reset functionality
-
-</details>
 
 ---
 
