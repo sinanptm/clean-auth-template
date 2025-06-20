@@ -38,13 +38,15 @@ npm install -g clean-auth
 
 **Create a New Project**
 ```bash
-clean-auth init my-auth-project --install
+# **OR Use npx (Without Installing Globally)**
+# Run commands without installing the CLI globally
+npx clean-auth init my-auth-project --i
 cd my-auth-project
 ```
 
 **Configure Authentication**
 ```bash
-clean-auth auth-config
+clean-auth auth-config [[options]](https://github.com/sinanptm/fullstack-clean-auth-template/tree/clean-auth-cli?tab=readme-ov-file#auth-config---configure-authentication)
 ```
 
 **Start Development**
@@ -56,18 +58,16 @@ pnpm dev
 
 If you prefer to set up the project manually without installing the CLI globally:
 
-1. **Clone the repository**
+ **Clone the repository**
 ```bash
 git clone https://github.com/sinanptm/fullstack-clean-auth-template.git
 cd fullstack-clean-auth-template
 ```
 
-2. **Install dependencies**
+**Install dependencies**
 ```bash
 pnpm install
 ```
-3. **Environment Configuration**
-##### Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
 
 **Start Development**
 ```bash
