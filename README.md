@@ -1,4 +1,4 @@
-<img width="949" alt="image" src="https://github.com/user-attachments/assets/a3458943-fcfa-4f1a-be39-407509d2b16b" /><div align="center">
+<div align="center">
 
 # Full-Stack Authentication Template
 
@@ -19,14 +19,57 @@ This comprehensive full-stack authentication template is designed with clean arc
 
 **📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
 
-
 <img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
 The template demonstrates modern web development practices with a focus on security, scalability, and maintainability. It includes comprehensive authentication flows, role-based access control, and production-ready deployment configurations.
 
 ---
 
-## ✨ Key Features
+## 📱 Application Screenshots
+
+<details>
+<summary><strong>🖼️ View Application Interface</strong></summary>
+
+### Authentication Flow
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+
+**User Registration**
+<img src="https://github.com/user-attachments/assets/a91bfc8b-ebf1-46f9-b783-1382f09489b3" alt="User Signup Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Forgot Password Modal**
+<img src="https://github.com/user-attachments/assets/c427b1fd-53d6-4cff-a5c3-9633e3056716" alt="Forgot Password Popup" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Password Reset Email**
+<img src="https://github.com/user-attachments/assets/b41320de-8cb2-4e5d-930b-061cfc608b1b" alt="Forgot Password Email" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**OTP Verification**
+<img src="https://github.com/user-attachments/assets/31797b3a-6ead-4d2c-a23a-549e907da59f" alt="OTP Verification Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**OTP Email Verification**
+<img src="https://github.com/user-attachments/assets/af435d9a-9c70-4083-948d-2927fb7e87ac" alt="OTP Verification Email" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+</div>
+
+### User & Admin Interfaces
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+
+**User Profile Dashboard**
+<img src="https://github.com/user-attachments/assets/3c8aa0bb-f406-4e9a-8efa-eeda59fffbbc" alt="User Profile Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Admin Login**
+<img src="https://github.com/user-attachments/assets/793bd7a9-5b01-4285-bbe0-a644fa6dffdb" alt="Admin Signin Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+**Admin Dashboard**
+<img src="https://github.com/user-attachments/assets/c2e5edef-db7d-488b-8c2e-9c7c1d331f69" alt="Admin Dashboard" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary><strong>✨ Key Features</strong></summary>
 
 ### 🏗️ Architecture & Design
 - **Clean Architecture** - Domain-driven design with clear separation of concerns
@@ -54,6 +97,8 @@ The template demonstrates modern web development practices with a focus on secur
 - **Development Tools** - ESLint, Prettier, Hot reload
 - **Deployment Ready** - Production-optimized builds
 - **CI/CD Pipeline** - Automated testing, building, and quality checks
+
+</details>
 
 ---
 
@@ -83,71 +128,15 @@ The template demonstrates modern web development practices with a focus on secur
 <details>
 <summary><strong>🔄 Authentication Flow Diagram</strong></summary>
 
-```mermaid
-graph TB
-    %% Entry Point
-    A["🔑 Sign In/Up Page"] --> B{"Authentication Method"}
-
-    %% Email/Password Flow
-    B -->|"📧 Email/Password"| C["📝 Enter Credentials"]
-    C --> D{"Valid Credentials?"}
-    D -->|"❌"| E["❌ Error Message"]
-    E --> C
-    D -->|"✅"| F["🔢 Generate OTP"]
-    F --> G["📧 Send OTP Email"]
-    G --> H["🔢 OTP Verification Page"]
-    H --> I["Enter OTP Code"]
-    I --> J{"Valid & Fresh OTP?"}
-    J -->|"❌"| K["Try Again"]
-    K --> I
-    J -->|"✅"| L["🎯 Generate JWT"]
-
-    %% OAuth Flow
-    B -->|"🔥 OAuth (Google/GitHub)"| M["🔥 Firebase OAuth Popup"]
-    M --> N["👤 Select Provider"]
-    N --> O["🔐 Provider Authentication"]
-    O --> P{"Auth Success?"}
-    P -->|"❌"| Q["❌ OAuth Error"]
-    Q --> A
-    P -->|"✅"| R["🎯 Get Firebase Token"]
-    R --> S["📧 Extract User Info"]
-    S --> T["🔗 Send Token to Backend"]
-    T --> U["🔍 Validate Firebase Token"]
-    U --> V{"Token Valid?"}
-    V -->|"❌"| W["❌ Token Invalid"]
-    W --> A
-    V -->|"✅"| X{"User Exists?"}
-    X -->|"❌"| Y["👤 Create New User"]
-    X -->|"✅"| Z["📝 Update User Info"]
-    Y --> L
-    Z --> L
-
-    %% Common Final Steps
-    L --> AA["🍪 Set HTTP-Only Cookies"]
-    AA --> BB["✨ Authenticated User"]
-    BB --> CC["🛡️ User Dashboard Access"]
-
-    %% Additional Flows
-    DD["🔄 Token Expiry"] --> EE["🔄 Auto Refresh"]
-    EE --> BB
-
-    FF["🔒 Forgot Password"] --> GG["📧 Reset Email with OTP"]
-    GG --> HH["🔢 OTP Verification"]
-    HH --> II["🔑 New Password"]
-    II --> A
-
-    %% Admin Flow (Separate)
-    JJ["🔒 Admin Login"] --> KK["📧 Admin Credentials"]
-    KK --> LL["🔍 Validate with .env"]
-    LL --> MM{"Match Admin Config?"}
-    MM -->|"❌"| NN["❌ Access Denied"]
-    NN --> JJ
-    MM -->|"✅"| OO["🎯 Generate Admin JWT"]
-    OO --> PP["🏷️ Set Admin Role"]
-    PP --> QQ["🍪 Set Admin Cookies"]
-    QQ --> RR["✨ Authenticated Admin"]
-    RR --> SS["👑 Admin Panel Access"]
-```
+> **📋 Coming Soon**: Detailed authentication flow diagram will be added here to visualize the complete user authentication process, including email/password login, OAuth integration, OTP verification, and admin authentication flows.
+>
+> The diagram will illustrate:
+> - User registration and login processes
+> - Multi-factor authentication with OTP
+> - OAuth integration with Google and GitHub
+> - Admin authentication workflow
+> - Token management and refresh cycles
+> - Password reset functionality
 
 </details>
 
@@ -165,7 +154,7 @@ graph TB
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
-| **CI/CD Pipeline** | Push to `main`/`develop`, PRs | Build, test, and quality checks |
+| **CI/CD Pipeline** | Push to \`main\`/\`develop\`, PRs | Build, test, and quality checks |
 | **Security Audit** | Weekly schedule, Push/PR | Vulnerability scanning |
 | **Update Dependencies** | Weekly schedule, Manual | Automated dependency updates |
 
@@ -189,20 +178,20 @@ graph TB
 <summary><strong>📥 Installation Guide</strong></summary>
 
 ### 1. Clone the repository
-```bash
+\`\`\`bash
 git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
 cd fullstack-clean-auth-template
-```
+\`\`\`
 
 ### 2. Install dependencies
-```bash
+\`\`\`bash
 pnpm install
-```
+\`\`\`
 
 ### 3. Environment Configuration
 
-Create `.env` file in the `server/` directory:
-```env
+Create \`.env\` file in the \`server/\` directory:
+\`\`\`env
 # Database
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
 
@@ -230,10 +219,10 @@ ADMIN_PASSWORD=your-secure-admin-password
 FIREBASE_PROJECT_ID=your-firebase-project-id
 FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
 FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\nYOUR_PRIVATE_KEY\\n-----END PRIVATE KEY-----\\n"
-```
+\`\`\`
 
-Create `.env.local` file in the `web/` directory:
-```env
+Create \`.env.local\` file in the \`web/\` directory:
+\`\`\`env
 # API Configuration
 NEXT_PUBLIC_SERVER_URL=http://localhost:8000
 
@@ -244,17 +233,17 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
 NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-```
+\`\`\`
 
 ### 4. Start Development Servers
-```bash
+\`\`\`bash
 # Start both frontend and backend
 pnpm dev
 
 # Or start individually
 pnpm --prefix server dev    # Backend: http://localhost:8000
 pnpm --prefix web dev       # Frontend: http://localhost:3000
-```
+\`\`\`
 
 </details>
 
@@ -267,14 +256,14 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
-| `POST` | `/api/auth/signup` | User registration | `{ email, password, name }` |
-| `POST` | `/api/auth/signin` | Email/password login | `{ email, password }` |
-| `POST` | `/api/auth/verify-otp` | Verify OTP code | `{ email, otp }` |
-| `POST` | `/api/auth/oauth-2` | OAuth authentication | `{ firebaseToken }` |
-| `POST` | `/api/auth/forgot-password` | Request password reset | `{ email }` |
-| `POST` | `/api/auth/reset-password` | Reset password with OTP | `{ email, otp, newPassword }` |
-| `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
-| `POST` | `/api/auth/logout` | User logout | - |
+| \`POST\` | \`/api/auth/signup\` | User registration | \`{ email, password, name }\` |
+| \`POST\` | \`/api/auth/signin\` | Email/password login | \`{ email, password }\` |
+| \`POST\` | \`/api/auth/verify-otp\` | Verify OTP code | \`{ email, otp }\` |
+| \`POST\` | \`/api/auth/oauth-2\` | OAuth authentication | \`{ firebaseToken }\` |
+| \`POST\` | \`/api/auth/forgot-password\` | Request password reset | \`{ email }\` |
+| \`POST\` | \`/api/auth/reset-password\` | Reset password with OTP | \`{ email, otp, newPassword }\` |
+| \`POST\` | \`/api/auth/refresh\` | Refresh access token | \`{ refreshToken }\` |
+| \`POST\` | \`/api/auth/logout\` | User logout | - |
 
 </details>
 
@@ -283,8 +272,8 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
-| `GET` | `/api/user/profile` | Get user profile | ✅ User |
-| `PUT` | `/api/user/profile` | Update user profile | ✅ User |
+| \`GET\` | \`/api/user/profile\` | Get user profile | ✅ User |
+| \`PUT\` | \`/api/user/profile\` | Update user profile | ✅ User |
 
 </details>
 
@@ -293,12 +282,12 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
-| `POST` | `/api/admin/signin` | Admin login | - |
-| `GET` | `/api/admin/users` | List all users | ✅ Admin |
-| `GET` | `/api/admin/users/:id` | Get specific user | ✅ Admin |
-| `PUT` | `/api/admin/users/:id` | Update user | ✅ Admin |
-| `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
-| `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
+| \`POST\` | \`/api/admin/signin\` | Admin login | - |
+| \`GET\` | \`/api/admin/users\` | List all users | ✅ Admin |
+| \`GET\` | \`/api/admin/users/:id\` | Get specific user | ✅ Admin |
+| \`PUT\` | \`/api/admin/users/:id\` | Update user | ✅ Admin |
+| \`DELETE\` | \`/api/admin/users/:id\` | Delete user | ✅ Admin |
+| \`GET\` | \`/api/admin/analytics\` | System analytics | ✅ Admin |
 
 </details>
 
@@ -335,27 +324,27 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 ### Available Scripts
 
 #### Root Level
-```bash
+\`\`\`bash
 pnpm dev          # Start both frontend and backend
 pnpm format       # Format code using Prettier
 pnpm lint         # Lint entire project
-```
+\`\`\`
 
-#### Backend (`server/`)
-```bash
+#### Backend (\`server/\`)
+\`\`\`bash
 pnpm dev          # Start development server with hot reload
 pnpm build        # Build for production
 pnpm start        # Start production server
 pnpm test         # Run test suite
-```
+\`\`\`
 
-#### Frontend (`web/`)
-```bash
+#### Frontend (\`web/\`)
+\`\`\`bash
 pnpm dev          # Start Next.js development server
 pnpm build        # Build for production
 pnpm start        # Start production server
 pnpm lint         # Lint frontend code
-```
+\`\`\`
 
 ---
 
@@ -401,11 +390,11 @@ We welcome contributions from the community! Here's how you can help:
 ### How to Contribute
 
 1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+2. **Create** a feature branch (\`git checkout -b feature/amazing-feature\`)
 3. **Follow** the existing code style and architecture patterns
 4. **Add** tests for new functionality
-5. **Commit** your changes (`git commit -m 'Add some amazing feature'`)
-6. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Commit** your changes (\`git commit -m 'Add some amazing feature'\`)
+6. **Push** to the branch (\`git push origin feature/amazing-feature\`)
 7. **Open** a Pull Request
 
 ### Development Guidelines
@@ -438,17 +427,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ❗ **License Notice**: Keep the original license notice
 
 ---
-
-<img width="1696" alt="signup" src="https://github.com/user-attachments/assets/a91bfc8b-ebf1-46f9-b783-1382f09489b3" />
-<img width="1167" alt="forgot-password-opup" src="https://github.com/user-attachments/assets/c427b1fd-53d6-4cff-a5c3-9633e3056716" />
-<img width="1023" alt="forgot-password-mail" src="https://github.com/user-attachments/assets/b41320de-8cb2-4e5d-930b-061cfc608b1b" />
-<img width="1694" alt="otp-verification-page" src="https://github.com/user-attachments/assets/31797b3a-6ead-4d2c-a23a-549e907da59f" />
-<img width="949" alt="opt-virifiaction-mail" src="https://github.com/user-attachments/assets/af435d9a-9c70-4083-948d-2927fb7e87ac" />
-<img width="1695" alt="admin-dashboard" src="https://github.com/user-attachments/assets/c2e5edef-db7d-488b-8c2e-9c7c1d331f69" />
-<img width="1704" alt="admin-signin" src="https://github.com/user-attachments/assets/793bd7a9-5b01-4285-bbe0-a644fa6dffdb" />
-<img width="1710" alt="admin-profile" src="https://github.com/user-attachments/assets/3c8aa0bb-f406-4e9a-8efa-eeda59fffbbc" />
-
-
 
 ## 📞 Support
 
