@@ -333,7 +333,8 @@ ___
 
 ## 📚 API Documentation
 
-**🔐 Authentication Endpoints**
+<details>
+<summary><strong>🔐 Authentication Endpoints</strong></summary>
 
 | Method | Endpoint | Description | Body |
 |--------|----------|-------------|------|
