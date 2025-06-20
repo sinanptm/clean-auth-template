@@ -67,22 +67,100 @@ The template demonstrates modern web development practices with a focus on secur
 </details>
 
 ---
-<details>
-<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+### 🔄 Authentication Flow Diagram
+```mermaid
+graph TB
+    %% Entry Point
+    A["🔑 Sign In/Up Page"] --> B{"Authentication Method"}
 
-> **📋 Coming Soon**: Detailed authentication flow diagram will be added here to visualize the complete user authentication process, including email/password login, OAuth integration, OTP verification, and admin authentication flows.
->
-> The diagram will illustrate:
-> - User registration and login processes
-> - Multi-factor authentication with OTP
-> - OAuth integration with Google and GitHub
-> - Admin authentication workflow
-> - Token management and refresh cycles
-> - Password reset functionality
+    %% Email/Password Flow
+    B -->|"📧 Email/Password"| C["📝 Enter Credentials"]
+    C --> D{"Valid Credentials?"}
+    D -->|"❌"| E["❌ Error Message"]
+    E --> C
+    D -->|"✅"| F["🔢 Generate OTP"]
+    F --> G["📧 Send OTP Email"]
+    G --> H["🔢 OTP Verification Page"]
+    H --> I["Enter OTP Code"]
+    I --> J{"Valid & Fresh OTP?"}
+    J -->|"❌"| K["Try Again"]
+    K --> I
+    J -->|"✅"| L["🎯 Generate JWT"]
 
-</details>
+    %% OAuth Flow
+    B -->|"🔥 OAuth (Google/GitHub)"| M["🔥 Firebase OAuth Popup"]
+    M --> N["👤 Select Provider"]
+    N --> O["🔐 Provider Authentication"]
+    O --> P{"Auth Success?"}
+    P -->|"❌"| Q["❌ OAuth Error"]
+    Q --> A
+    P -->|"✅"| R["🎯 Get Firebase Token"]
+    R --> S["📧 Extract User Info"]
+    S --> T["🔗 Send Token to Backend"]
+    T --> U["🔍 Validate Firebase Token"]
+    U --> V{"Token Valid?"}
+    V -->|"❌"| W["❌ Token Invalid"]
+    W --> A
+    V -->|"✅"| X{"User Exists?"}
+    X -->|"❌"| Y["👤 Create New User"]
+    X -->|"✅"| Z["📝 Update User Info"]
+    Y --> L
+    Z --> L
 
----
+    %% Common Final Steps
+    L --> AA["🍪 Set HTTP-Only Cookies"]
+    AA --> BB["✨ Authenticated User"]
+    BB --> CC["🛡️ User Dashboard Access"]
+
+    %% Additional Flows
+    DD["🔄 Token Expiry"] --> EE["🔄 Auto Refresh"]
+    EE --> BB
+
+    FF["🔒 Forgot Password"] --> GG["📧 Reset Email with OTP"]
+    GG --> HH["🔢 OTP Verification"]
+    HH --> II["🔑 New Password"]
+    II --> A
+
+    %% Admin Flow (Separate)
+    JJ["🔒 Admin Login"] --> KK["📧 Admin Credentials"]
+    KK --> LL["🔍 Validate with .env"]
+    LL --> MM{"Match Admin Config?"}
+    MM -->|"❌"| NN["❌ Access Denied"]
+    NN --> JJ
+    MM -->|"✅"| OO["🎯 Generate Admin JWT"]
+    OO --> PP["🏷️ Set Admin Role"]
+    PP --> QQ["🍪 Set Admin Cookies"]
+    QQ --> RR["✨ Authenticated Admin"]
+    RR --> SS["👑 Admin Panel Access"]
+
+    %% Styling with Black Text
+    style A fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#000000
+    style BB fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#000000
+    style RR fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#000000
+    style L fill:#e0e7ff,stroke:#6366f1,stroke-width:2px,color:#000000
+    style M fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#000000
+    style CC fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
+    style SS fill:#fef7ff,stroke:#a855f7,stroke-width:2px,color:#000000
+
+    %% Error States with Black Text
+    style E fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
+    style Q fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
+    style W fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
+    style NN fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
+
+    %% Additional Key Nodes with Black Text
+    style B fill:#f3f4f6,stroke:#6b7280,stroke-width:2px,color:#000000
+    style D fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style J fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style P fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style V fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style X fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style MM fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
+    style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
+```
+
+
+
 
 <details>
 <summary><strong>✨ Key Features</strong></summary>
@@ -115,8 +193,6 @@ The template demonstrates modern web development practices with a focus on secur
 - **CI/CD Pipeline** - Automated testing, building, and quality checks
 
 </details>
-
-
 
 ## 🚀 Getting Started
 
