@@ -7,7 +7,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![npm version](https://img.shields.io/npm/v/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 [![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -20,7 +19,7 @@
 This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
 **📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/) <br />
-**📚 CLI Package**: [https://www.npmjs.com/package/clean-auth](https://www.npmjs.com/package/clean-auth)
+**🛠️ CLI Tool**:  [https://www.npmjs.com/package/clean-auth](https://www.npmjs.com/package/clean-auth)
 
 <img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
@@ -39,13 +38,15 @@ npm install -g clean-auth
 
 **Create a New Project**
 ```bash
-clean-auth init my-auth-project --install
+# OR Use npx (Without Installing Globally)
+# Run commands without installing the CLI globally
+npx clean-auth init my-auth-project --i
 cd my-auth-project
 ```
 
 **Configure Authentication**
 ```bash
-clean-auth auth-config
+clean-auth auth-config [options]
 ```
 
 **Start Development**
@@ -55,27 +56,31 @@ pnpm dev
 
 ### Alternative
 
-If you prefer to set up the project manually without installing the CLI globally:
+If you prefer to set up the project manually without using CLI:
 
-#### 📥 Installation Guide
-
-1. **Clone the repository**
+ **Clone the repository**
 ```bash
 git clone https://github.com/sinanptm/fullstack-clean-auth-template.git
 cd fullstack-clean-auth-template
 ```
 
-2. **Install dependencies**
+**Install dependencies**
 ```bash
 pnpm install
 ```
-3. **Environment Configuration**
-   ##### Create `.env` files in both `server/` and `web/` directories with the required environment variables. You can refer to the `.env.example` files in each directory for the complete list of required variables.
 
 **Start Development**
 ```bash
 pnpm dev
 ```
+---
+
+## 💻 Prerequisites
+- Node.js v20 or higher
+- pnpm v10.8.1 or higher
+- MongoDB (local installation or MongoDB Atlas)
+- Firebase project with Authentication enabled
+
 ---
 
 <details>
@@ -189,8 +194,140 @@ clean-auth init --help
 </details>
 
 ---
+
 <details>
-<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+<summary><strong>✨ Key Features</strong></summary>
+
+### 🏗️ Architecture & Design
+- **Clean Architecture** - Domain-driven design with clear separation of concerns
+- **Modular Structure** - Easy to extend and maintain  
+- **Framework Independence** - Core business logic is decoupled from frameworks
+- **TypeScript First** - Full type safety across the entire stack
+
+### 🔐 Authentication & Security
+- **Multi-factor Authentication** - Email/Password with OTP verification
+- **OAuth Integration** - Google and GitHub social login
+- **Role-based Access Control** - User and admin roles with protected routes
+- **JWT Token Management** - Secure access and refresh token implementation
+- **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
+
+### ⚡ Modern Technology Stack
+- **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
+- **Backend**: Express.js 5, Node.js, TypeScript
+- **Database**: MongoDB with Mongoose ODM
+- **State Management**: Zustand + React Query
+- **Authentication**: Firebase OAuth, JWT, Nodemailer
+
+### 🚀 Production Ready
+- **Scalable Architecture** - Built for enterprise-level applications
+- **Comprehensive Testing** - Unit and integration tests included
+- **Development Tools** - ESLint, Prettier, Hot reload
+- **Deployment Ready** - Production-optimized builds
+- **CI/CD Pipeline** - Automated testing, building, and quality checks
+
+</details>
+
+___
+
+<details>
+<summary><strong>
+🔧 CI/CD Pipeline
+</strong></summary>
+
+
+### 🔄 Automated Workflows
+- **Continuous Integration** - Automated testing and building on every push
+- **Quality Assurance** - Code formatting, linting, and type checking
+- **Security Auditing** - Weekly dependency vulnerability scans
+- **Dependency Management** - Automated dependency updates with PR creation
+
+### GitHub Actions Workflows
+
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| **CI/CD Pipeline** | Push to `main`/`develop`, PRs | Build, test, and quality checks |
+| **Security Audit** | Weekly schedule, Push/PR | Vulnerability scanning |
+| **Update Dependencies** | Weekly schedule, Manual | Automated dependency updates |
+
+#### Pipeline Features
+- **Parallel Execution** - Server and web builds run simultaneously
+- **Caching Strategy** - Optimized build times with dependency caching
+- **Artifact Management** - Build artifacts stored for deployment
+- **Multi-stage Validation** - Tests, linting, and type checking
+
+</details>
+
+---
+
+<details>
+<summary><strong>📚 API Documentation</strong></summary>
+
+| Method | Endpoint | Description | Body |
+|--------|----------|-------------|------|
+| `POST` | `/api/auth/signup` | User registration | `{ email, password, name }` |
+| `POST` | `/api/auth/signin` | Email/password login | `{ email, password }` |
+| `POST` | `/api/auth/verify-otp` | Verify OTP code | `{ email, otp }` |
+| `POST` | `/api/auth/oauth-2` | OAuth authentication | `{ firebaseToken }` |
+| `POST` | `/api/auth/forgot-password` | Request password reset | `{ email }` |
+| `POST` | `/api/auth/reset-password` | Reset password with OTP | `{ email, otp, newPassword }` |
+| `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
+| `POST` | `/api/auth/logout` | User logout | - |
+
+
+**👤 User Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `GET` | `/api/user/profile` | Get user profile | ✅ User |
+| `PUT` | `/api/user/profile` | Update user profile | ✅ User |
+
+
+**👑 Admin Endpoints**
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `POST` | `/api/admin/signin` | Admin login | - |
+| `GET` | `/api/admin/users` | List all users | ✅ Admin |
+| `GET` | `/api/admin/users/:id` | Get specific user | ✅ Admin |
+| `PUT` | `/api/admin/users/:id` | Update user | ✅ Admin |
+| `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
+| `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
+
+</details>
+
+---
+
+<details>
+<summary><strong>🔒 Security Features</strong></summary>
+
+### 🔐 Authentication Security
+- **JWT Tokens**: Secure access and refresh token implementation
+- **HTTP-Only Cookies**: Protection against XSS attacks
+- **Password Hashing**: bcrypt with 10 salt rounds
+- **OTP Verification**: Time-limited one-time passwords
+
+### 🛡️ Authorization & Access Control
+- **Role-Based Access Control (RBAC)**: User and admin roles
+- **Protected Routes**: Middleware-based route protection
+- **Token Validation**: Server-side Firebase token verification
+
+### 🚫 Attack Prevention
+- **Rate Limiting**: Request throttling to prevent abuse
+- **CORS Configuration**: Cross-origin request security
+- **Input Validation**: Comprehensive Joi schema validation
+- **SQL Injection Prevention**: Parameterized database queries
+
+### 🔍 Monitoring & Logging
+- **Request Logging**: Detailed API request logging
+- **Error Tracking**: Comprehensive error handling
+- **Security Headers**: Helmet.js security headers
+
+</details>
+
+---
+
+
+### 🔄 Authentication Flow Diagram
 
 ```mermaid
 graph TB
@@ -257,155 +394,6 @@ graph TB
     QQ --> RR["✨ Authenticated Admin"]
     RR --> SS["👑 Admin Panel Access"]
 ```
-
-</details>
-
----
-
-<details>
-<summary><strong>✨ Key Features</strong></summary>
-
-### 🏗️ Architecture & Design
-- **Clean Architecture** - Domain-driven design with clear separation of concerns
-- **Modular Structure** - Easy to extend and maintain  
-- **Framework Independence** - Core business logic is decoupled from frameworks
-- **TypeScript First** - Full type safety across the entire stack
-
-### 🔐 Authentication & Security
-- **Multi-factor Authentication** - Email/Password with OTP verification
-- **OAuth Integration** - Google and GitHub social login
-- **Role-based Access Control** - User and admin roles with protected routes
-- **JWT Token Management** - Secure access and refresh token implementation
-- **Security Best Practices** - Rate limiting, CORS, bcrypt hashing
-
-### ⚡ Modern Technology Stack
-- **Frontend**: Next.js 15, React 19, Tailwind CSS, Shadcn UI
-- **Backend**: Express.js 5, Node.js, TypeScript
-- **Database**: MongoDB with Mongoose ODM
-- **State Management**: Zustand + React Query
-- **Authentication**: Firebase OAuth, JWT, Nodemailer
-
-### 🚀 Production Ready
-- **Scalable Architecture** - Built for enterprise-level applications
-- **Comprehensive Testing** - Unit and integration tests included
-- **Development Tools** - ESLint, Prettier, Hot reload
-- **Deployment Ready** - Production-optimized builds
-- **CI/CD Pipeline** - Automated testing, building, and quality checks
-
-</details>
-
-___
-
-## 💻 Prerequisites
-- Node.js v20 or higher
-- pnpm v10.8.1 or higher
-- MongoDB (local installation or MongoDB Atlas)
-- Firebase project with Authentication enabled
-
-## 🏛️ Architecture
-
-### Clean Architecture Benefits
-- **Separation of Concerns**: Each layer has a single responsibility
-- **Dependency Inversion**: Abstractions don't depend on concrete implementations  
-- **Testability**: Business logic is framework-independent
-- **Maintainability**: Easy to modify and extend features
-
----
-
-## 🔧 CI/CD Pipeline
-
-### 🔄 Automated Workflows
-- **Continuous Integration** - Automated testing and building on every push
-- **Quality Assurance** - Code formatting, linting, and type checking
-- **Security Auditing** - Weekly dependency vulnerability scans
-- **Dependency Management** - Automated dependency updates with PR creation
-
-### GitHub Actions Workflows
-
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| **CI/CD Pipeline** | Push to `main`/`develop`, PRs | Build, test, and quality checks |
-| **Security Audit** | Weekly schedule, Push/PR | Vulnerability scanning |
-| **Update Dependencies** | Weekly schedule, Manual | Automated dependency updates |
-
-#### Pipeline Features
-- **Parallel Execution** - Server and web builds run simultaneously
-- **Caching Strategy** - Optimized build times with dependency caching
-- **Artifact Management** - Build artifacts stored for deployment
-- **Multi-stage Validation** - Tests, linting, and type checking
-
----
-
-## 📚 API Documentation
-
-<details>
-<summary><strong>🔐 Authentication Endpoints</strong></summary>
-
-| Method | Endpoint | Description | Body |
-|--------|----------|-------------|------|
-| `POST` | `/api/auth/signup` | User registration | `{ email, password, name }` |
-| `POST` | `/api/auth/signin` | Email/password login | `{ email, password }` |
-| `POST` | `/api/auth/verify-otp` | Verify OTP code | `{ email, otp }` |
-| `POST` | `/api/auth/oauth-2` | OAuth authentication | `{ firebaseToken }` |
-| `POST` | `/api/auth/forgot-password` | Request password reset | `{ email }` |
-| `POST` | `/api/auth/reset-password` | Reset password with OTP | `{ email, otp, newPassword }` |
-| `POST` | `/api/auth/refresh` | Refresh access token | `{ refreshToken }` |
-| `POST` | `/api/auth/logout` | User logout | - |
-
-</details>
-
-<details>
-<summary><strong>👤 User Endpoints</strong></summary>
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `GET` | `/api/user/profile` | Get user profile | ✅ User |
-| `PUT` | `/api/user/profile` | Update user profile | ✅ User |
-
-</details>
-
-<details>
-<summary><strong>👑 Admin Endpoints</strong></summary>
-
-| Method | Endpoint | Description | Auth Required |
-|--------|----------|-------------|---------------|
-| `POST` | `/api/admin/signin` | Admin login | - |
-| `GET` | `/api/admin/users` | List all users | ✅ Admin |
-| `GET` | `/api/admin/users/:id` | Get specific user | ✅ Admin |
-| `PUT` | `/api/admin/users/:id` | Update user | ✅ Admin |
-| `DELETE` | `/api/admin/users/:id` | Delete user | ✅ Admin |
-| `GET` | `/api/admin/analytics` | System analytics | ✅ Admin |
-
-</details>
-
----
-
-<details>
-<summary><strong>🔒 Security Features</strong></summary>
-
-### 🔐 Authentication Security
-- **JWT Tokens**: Secure access and refresh token implementation
-- **HTTP-Only Cookies**: Protection against XSS attacks
-- **Password Hashing**: bcrypt with 10 salt rounds
-- **OTP Verification**: Time-limited one-time passwords
-
-### 🛡️ Authorization & Access Control
-- **Role-Based Access Control (RBAC)**: User and admin roles
-- **Protected Routes**: Middleware-based route protection
-- **Token Validation**: Server-side Firebase token verification
-
-### 🚫 Attack Prevention
-- **Rate Limiting**: Request throttling to prevent abuse
-- **CORS Configuration**: Cross-origin request security
-- **Input Validation**: Comprehensive Joi schema validation
-- **SQL Injection Prevention**: Parameterized database queries
-
-### 🔍 Monitoring & Logging
-- **Request Logging**: Detailed API request logging
-- **Error Tracking**: Comprehensive error handling
-- **Security Headers**: Helmet.js security headers
-
-</details>
 
 ---
 
