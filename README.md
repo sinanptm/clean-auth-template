@@ -134,31 +134,6 @@ graph TB
     PP --> QQ["🍪 Set Admin Cookies"]
     QQ --> RR["✨ Authenticated Admin"]
     RR --> SS["👑 Admin Panel Access"]
-
-    %% Styling with Black Text
-    style A fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#000000
-    style BB fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#000000
-    style RR fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#000000
-    style L fill:#e0e7ff,stroke:#6366f1,stroke-width:2px,color:#000000
-    style M fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#000000
-    style CC fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#000000
-    style SS fill:#fef7ff,stroke:#a855f7,stroke-width:2px,color:#000000
-
-    %% Error States with Black Text
-    style E fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style Q fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style W fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-    style NN fill:#fecaca,stroke:#dc2626,stroke-width:1px,color:#000000
-
-    %% Additional Key Nodes with Black Text
-    style B fill:#f3f4f6,stroke:#6b7280,stroke-width:2px,color:#000000
-    style D fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style J fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style P fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style V fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style X fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style MM fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#000000
-    style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
 ```
 
 </details>
