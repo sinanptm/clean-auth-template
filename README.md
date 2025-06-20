@@ -322,21 +322,6 @@ pnpm lint         # Lint frontend code
 
 </details>
 
-<details>
-<summary><strong>🌐 Deployment Options</strong></summary>
-
-#### Vercel (Frontend)
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy with automatic CI/CD
-
-#### Railway/Render (Backend)
-1. Connect your GitHub repository
-2. Configure environment variables
-3. Set up automatic deployments
-
-</details>
-
 ---
 
 ## 🤝 Contributing
