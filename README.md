@@ -208,21 +208,6 @@ pnpm --prefix web dev       # Frontend: http://localhost:3000
 
 ---
 
-## 🛠️ Technology Stack
-
-| Category | Technologies |
-|----------|-------------|
-| **Frontend** | Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI |
-| **Backend** | Express.js 5, Node.js, TypeScript |
-| **Database** | MongoDB, Mongoose ODM |
-| **Authentication** | JWT, Firebase Auth, Nodemailer |
-| **State Management** | Zustand, React Query |
-| **Development** | ESLint, Prettier, Jest |
-| **Security** | bcrypt, CORS, Rate Limiting, Joi Validation |
-| **CI/CD** | GitHub Actions, Automated Testing, Code Quality Checks |
-
----
-
 ## 🏛️ Architecture
 
 ### Clean Architecture Benefits
