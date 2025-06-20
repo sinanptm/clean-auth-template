@@ -53,15 +53,9 @@ clean-auth auth-config
 pnpm dev
 ```
 
-### Alternative: Manual Setup
+### Alternative
 
-If you prefer to set up the project manually without using the CLI tool:
-
-#### Prerequisites
-- Node.js v20 or higher
-- pnpm v10.8.1 or higher
-- MongoDB (local installation or MongoDB Atlas)
-- Firebase project with Authentication enabled
+If you prefer to set up the project manually without installing the CLI globally:
 
 #### 📥 Installation Guide
 
@@ -147,6 +141,7 @@ clean-auth --help
 clean-auth init --help
 ```
 </details>
+
 ---
 
 <details>
@@ -298,43 +293,11 @@ graph TB
 
 ___
 
-## 🚀 Manual Setup (Alternative)
-
-If you prefer to set up the project manually without the CLI:
-
-### Prerequisites
+## 💻 Prerequisites
 - Node.js v20 or higher
 - pnpm v10.8.1 or higher
 - MongoDB (local installation or MongoDB Atlas)
 - Firebase project with Authentication enabled
-
-### 📥 Installation Guide
-
-#### 1. Clone the repository
-```bash
-git clone git@github.com:sinanptm/fullstack-clean-auth-template.git
-cd fullstack-clean-auth-template
-```
-
-#### 2. Install dependencies
-```bash
-pnpm install
-```
-
-#### 3. Environment Configuration
-Create `.env` files in both `server/` and `web/` directories with the required environment variables. Refer to the `.env.example` files in each directory for the complete list of required variables.
-
-#### 4. Start Development Servers
-```bash
-# Start both frontend and backend
-pnpm dev
-
-# Or start individually
-pnpm --prefix server dev    # Backend: http://localhost:8000
-pnpm --prefix web dev       # Frontend: http://localhost:3000
-```
-
----
 
 ## 🏛️ Architecture
 
