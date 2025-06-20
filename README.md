@@ -1,4 +1,4 @@
-<div align="center">
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/a3458943-fcfa-4f1a-be39-407509d2b16b" /><div align="center">
 
 # Full-Stack Authentication Template
 
@@ -18,6 +18,7 @@
 This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
 **📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/)
+
 
 <img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
@@ -437,6 +438,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ❗ **License Notice**: Keep the original license notice
 
 ---
+
+<img width="1696" alt="signup" src="https://github.com/user-attachments/assets/a91bfc8b-ebf1-46f9-b783-1382f09489b3" />
+<img width="1167" alt="forgot-password-opup" src="https://github.com/user-attachments/assets/c427b1fd-53d6-4cff-a5c3-9633e3056716" />
+<img width="1023" alt="forgot-password-mail" src="https://github.com/user-attachments/assets/b41320de-8cb2-4e5d-930b-061cfc608b1b" />
+<img width="1694" alt="otp-verification-page" src="https://github.com/user-attachments/assets/31797b3a-6ead-4d2c-a23a-549e907da59f" />
+<img width="949" alt="opt-virifiaction-mail" src="https://github.com/user-attachments/assets/af435d9a-9c70-4083-948d-2927fb7e87ac" />
+<img width="1695" alt="admin-dashboard" src="https://github.com/user-attachments/assets/c2e5edef-db7d-488b-8c2e-9c7c1d331f69" />
+<img width="1704" alt="admin-signin" src="https://github.com/user-attachments/assets/793bd7a9-5b01-4285-bbe0-a644fa6dffdb" />
+<img width="1710" alt="admin-profile" src="https://github.com/user-attachments/assets/3c8aa0bb-f406-4e9a-8efa-eeda59fffbbc" />
+
+
 
 ## 📞 Support
 
