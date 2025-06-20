@@ -67,7 +67,9 @@ The template demonstrates modern web development practices with a focus on secur
 </details>
 
 ---
-### 🔄 Authentication Flow Diagram
+<details>
+<summary><strong>🔄 Authentication Flow Diagram</strong></summary>
+
 ```mermaid
 graph TB
     %% Entry Point
@@ -159,8 +161,9 @@ graph TB
     style AA fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px,color:#000000
 ```
 
+</details>
 
-
+---
 
 <details>
 <summary><strong>✨ Key Features</strong></summary>
