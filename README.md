@@ -327,7 +327,10 @@ ___
 ---
 
 
-### 🔄 Authentication Flow Diagram
+<details>
+<summary><strong>
+    🔄 Authentication Flow Diagram
+</strong></summary>
 
 ```mermaid
 graph TB
@@ -395,6 +398,7 @@ graph TB
     RR --> SS["👑 Admin Panel Access"]
 ```
 
+</details>
 ---
 
 ## 💻 Development
