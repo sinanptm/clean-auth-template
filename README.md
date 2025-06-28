@@ -18,7 +18,7 @@
 
 This comprehensive full-stack authentication template is designed with clean architecture principles, providing a solid foundation for building scalable web applications with robust user authentication and authorization systems.
 
-**📚 Documentation**: [https://full-stack-clean-auth-template.vercel.app/](https://full-stack-clean-auth-template.vercel.app/) <br />
+**📚 Documentation**: [https://clean-auth-template.vercel.app](https://clean-auth-template.vercel.app/) <br />
 **🛠️ CLI Tool**:  [https://npmjs.com/package/clean-auth](https://www.npmjs.com/package/clean-auth)
 
 <img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
@@ -431,59 +431,14 @@ pnpm lint         # Lint frontend code
 
 ---
 
-## 🤝 Contributing
+# 🤝 Contributing
 
-We welcome contributions from the community! Here's how you can help:
-
-### How to Contribute
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Follow** the existing code style and architecture patterns
-4. **Add** tests for new functionality
-5. **Commit** your changes (`git commit -m 'Add some amazing feature'`)
-6. **Push** to the branch (`git push origin feature/amazing-feature`)
-7. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow the clean architecture principles
-- Write comprehensive tests for new features
-- Update documentation for API changes
-- Use TypeScript for type safety
-- Follow the existing code formatting standards
-
-### Reporting Issues
-
-If you find a bug or have a feature request, please open an issue with:
-- Clear description of the problem
-- Steps to reproduce (for bugs)
-- Expected vs actual behavior
-- System information (OS, Node.js version, etc.)
-
----
+[Contributing Guidelines](CONTRIBUTING.md)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE) – see the LICENSE file for details.
 
-### What this means:
-- ✅ **Commercial Use**: Use this code in commercial projects
-- ✅ **Modification**: Modify the code as needed
-- ✅ **Distribution**: Share and distribute the code
-- ✅ **Private Use**: Use for private projects
-- ❗ **License Notice**: Keep the original license notice
-
----
-
-## 📞 Support
-
-- 📚 **Documentation**: [Full Documentation](https://full-stack-clean-auth-template.vercel.app/)
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sinanptm/fullstack-clean-auth-template/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/sinanptm/fullstack-clean-auth-template/discussions)
-- 📦 **NPM Package**: [clean-auth CLI](https://www.npmjs.com/package/clean-auth)
-
----
 
 <div align="center">
 
