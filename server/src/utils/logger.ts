@@ -6,25 +6,41 @@ import path from "path";
 const logDirectory = path.resolve(path.join(__dirname, "../../"), "logs");
 
 const consoleFormat = format.printf(
-  ({ timestamp, level, message, stack, location, statusCode, url, data }) => {
+  ({ timestamp, level, message, stack, location, statusCode, url, data, [Symbol.for("splat")]: splat }) => {
+
     const logLevel = level.toUpperCase();
-    let output = `${timestamp} ${logLevel}`;
-    output += `${message}`;
+    let output = `${timestamp} ${logLevel} ${message}`;
+
+    if (splat && Array.isArray(splat)) {
+      output += ' ' + splat.map(arg => {
+        if (typeof arg === 'object') {
+          if (arg.meta && "skipFile" in arg.meta) {
+            const { skipFile, ...rest } = arg.meta;
+            if (Object.keys(rest).length > 0) {
+              return JSON.stringify(rest, null, 2);
+            }
+            return '';
+          }
+          return JSON.stringify(arg, null, 2);
+        }
+        return String(arg);
+      }).join(' ');
+    }
 
     if (location) {
-      output += `\x1b[36mLocation: ${location}\x1b[0m`;
+      output += `\x1b[36m Location: ${location}\x1b[0m`;
     }
     if (statusCode) {
-      output += `${statusCode}`;
+      output += ` ${statusCode}`;
     }
     if (url) {
-      output += `${url}`;
+      output += ` ${url}`;
     }
     if (data) {
-      output += `${JSON.stringify(data, null, 2)}`;
+      output += ` ${JSON.stringify(data, null, 2)}`;
     }
     if (stack) {
-      output += `${stack}`;
+      output += ` ${stack}`;
     }
 
     return output;
