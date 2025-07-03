@@ -46,7 +46,7 @@ cd my-auth-project
 
 **Configure Authentication**
 ```bash
-clean-auth auth-config [options]
+clean-auth config [options]
 ```
 
 **Start Development**
@@ -106,11 +106,11 @@ clean-auth init my-auth-project
 clean-auth init my-auth-project --install
 ```
 
-### `auth-config` - Configure Authentication
+### `config` - Configure Authentication
 Set up environment variables and authentication configuration interactively.
 
 ```bash
-clean-auth auth-config [options]
+clean-auth config [options]
 ```
 
 **Options:**
@@ -118,8 +118,8 @@ clean-auth auth-config [options]
 
 **Examples:**
 ```bash
-clean-auth auth-config
-clean-auth auth-config --skip
+clean-auth config
+clean-auth config --skip
 ```
 
 ### `clean` - Clean Project Structure
@@ -145,8 +145,6 @@ Display a list of all available commands.
 
 ```bash
 clean-auth help
-clean-auth --help
-clean-auth init --help
 ```
 </details>
 
