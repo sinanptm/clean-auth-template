@@ -33,34 +33,34 @@ interface Role {
 }
 
 export interface PostParams extends Role {
-  route: PostRoutes | PostRoutesWithParams;
+  route?: PostRoutes | PostRoutesWithParams;
   params?: Params;
   body?: Body;
   url?: string;
 }
 
 export interface GetParams extends Role {
-  route: GetRoutes | GetRoutesWithParams;
+  route?: GetRoutes | GetRoutesWithParams;
   params?: Params;
   url?: string;
 }
 
 export interface PutParams extends Role {
-  route: PutRoutes | PutRoutesWithParams;
+  route?: PutRoutes | PutRoutesWithParams;
   params?: Params;
   body?: Body;
   url?: string;
 }
 
 export interface DeleteParams extends Role {
-  route: DeleteRoutes | DeleteRoutesWithParams;
+  route?: DeleteRoutes | DeleteRoutesWithParams;
   params?: Params;
   body?: Body;
   url?: string;
 }
 
 export interface PatchParams extends Role {
-  route: PatchRoutes | PatchRoutesWithParams;
+  route?: PatchRoutes | PatchRoutesWithParams;
   params?: Params;
   body?: Body;
   url?: string;

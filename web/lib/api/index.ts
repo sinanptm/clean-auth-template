@@ -39,16 +39,20 @@ export const PATCH = async <T>({ route, params, url, role }: PatchParams) => {
  * @param url - An optional fully qualified custom URL to override route and params.
  * @returns The final request URL with placeholders replaced, or the custom URL if provided.
  */
-const getRequestUrl = (route: string, params?: Params, url?: string): string => {
+const getRequestUrl = (route?: string, params?: Params, url?: string): string => {
   if (url) {
     return url;
   }
 
-  if (!params) {
-    return route;
+  if (!route && !url) {
+    throw new Error("Url or Route must be provided");
   }
 
-  let finalUrl = route;
+  if (!params) {
+    return route!;
+  }
+
+  let finalUrl = route!;
 
   Object.entries(params).forEach(([key, value]) => {
     const placeholder = `:${key}`;
