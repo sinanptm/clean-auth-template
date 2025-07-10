@@ -11,7 +11,7 @@ export { metadata } from "./metadata";
 const RootLayout = ({ children }: WrapperProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${mainFont.className} antialiased `}>
+      <body className={`${mainFont.className} antialiased dark`}>
         <QueryProvider>
           <Navbar />
           <main>{children}</main>
