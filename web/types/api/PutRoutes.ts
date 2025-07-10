@@ -3,5 +3,8 @@ export enum PutRoutes {
 }
 
 export enum PutRoutesWithParams {
+  /**
+   * @param id = UserId - required
+   */
   UpdateUser = "/admin/user/:id",
 }
