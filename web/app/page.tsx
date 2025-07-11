@@ -25,10 +25,10 @@ const Page = () => {
       {!isAuthenticated && (
         <div className="flex gap-4">
           <Link href="/auth" prefetch={false}>
-            <Button>Sign In</Button>
+            <Button variant={"outline"}>Sign In</Button>
           </Link>
           <Link href="/auth/signup" prefetch={false}>
-            <Button>Sign Up</Button>
+            <Button variant={"outline"}>Sign Up</Button>
           </Link>
         </div>
       )}

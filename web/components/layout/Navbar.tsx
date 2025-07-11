@@ -11,6 +11,8 @@ import useLogoutAdmin from "@/hooks/api/admin/auth/useLogout";
 import LogoutConfirmDialog from "@/components/dialogs/LogoutConfirmDialog";
 import { APP_NAME } from "@/constants";
 import { UserRole } from "@/types";
+import dynamic from "next/dynamic";
+const ThemeButton = dynamic(() => import("./ThemeButton"), { ssr: false });
 
 const Navbar = () => {
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
@@ -47,7 +49,7 @@ const Navbar = () => {
     () => (
       <>
         <Link href="/" prefetch={false}>
-          <Button variant="default" size="sm">
+          <Button variant="outline" size="sm">
             User Area
           </Button>
         </Link>
@@ -57,7 +59,7 @@ const Navbar = () => {
           </Button>
         ) : (
           <Link href="/admin/auth" prefetch={false}>
-            <Button variant="ghost" size="sm">
+              <Button variant="outline" size="sm">
               Admin Sign In
             </Button>
           </Link>
@@ -71,7 +73,7 @@ const Navbar = () => {
     () => (
       <>
         <Link href={isAdminAuthenticated ? "/admin" : "/admin/auth"} prefetch={false}>
-          <Button variant={isAdminAuthenticated ? "ghost" : "default"} size="sm">
+          <Button variant={"outline"} size="sm">
             {isAdminAuthenticated ? "Admin Area" : "Admin Sign In"}
           </Button>
         </Link>
@@ -82,12 +84,12 @@ const Navbar = () => {
         ) : (
           <>
             <Link href="/auth" prefetch={false}>
-              <Button variant="default" size="sm">
+                <Button variant="outline" size="sm">
                 Sign In
               </Button>
             </Link>
             <Link href="/auth/signup" prefetch={false}>
-              <Button variant="default" size="sm">
+                <Button variant="outline" size="sm">
                 Sign Up
               </Button>
             </Link>
@@ -106,6 +108,7 @@ const Navbar = () => {
             {APP_NAME}
           </Link>
           <div className="flex items-center space-x-4">
+            <ThemeButton />
             {isAdminArea ? renderAdminNavigation : renderUserNavigation}
           </div>
         </div>
