@@ -5,12 +5,14 @@ Thank you for your interest in contributing to the Full-Stack Authentication Tem
 ## 📋 Before You Start
 
 ### Prerequisites
+
 - Node.js v22+
 - pnpm v10.8.1+
 - Basic understanding of Next.js, Express.js, and MongoDB
 - Familiarity with TypeScript
 
 ### Project Setup
+
 1. Fork the repository
 2. Clone your fork: `git clone https://github.com/sinanptm/fullstack-clean-auth-template`
 3. Install dependencies: `pnpm install`
@@ -20,6 +22,7 @@ Thank you for your interest in contributing to the Full-Stack Authentication Tem
 ## 🎯 Contribution Guidelines
 
 ### Code Standards
+
 - **Always format your code** before submitting a PR: `pnpm format`
 - Follow existing code patterns and architecture
 - Use TypeScript with proper type definitions
@@ -27,12 +30,14 @@ Thank you for your interest in contributing to the Full-Stack Authentication Tem
 - Keep functions small and focused
 
 ### Pull Request Rules
+
 1. **Format First**: Run `pnpm format` before creating your PR
 2. **Test Your Changes**: Ensure all existing tests pass with `pnpm test`
 3. **Clean Commits**: Use meaningful commit messages
 4. **Small PRs**: Keep changes focused and atomic
 
 ### Architecture Guidelines
+
 - Follow the Clean Architecture pattern
 - Keep business logic separate from frameworks
 - Use dependency injection where appropriate
@@ -41,6 +46,7 @@ Thank you for your interest in contributing to the Full-Stack Authentication Tem
 ## 🔧 Development Workflow
 
 ### Making Changes
+
 ```bash
 # 1. Create a feature branch
 git checkout -b feature/your-feature-name
@@ -64,6 +70,7 @@ git push origin feature/your-feature-name
 ```
 
 ### Commit Message Format
+
 ```
 type: brief description
 
@@ -78,6 +85,7 @@ test: add unit tests for auth middleware
 ## 🎨 What We're Looking For
 
 ### High Priority Contributions
+
 - Bug fixes and security improvements
 - Performance optimizations
 - Additional OAuth providers
@@ -86,6 +94,7 @@ test: add unit tests for auth middleware
 - Test coverage improvements
 
 ### Feature Ideas
+
 - Two-factor authentication
 - Email templates customization
 - Additional database support (PostgreSQL, etc.)
@@ -94,6 +103,7 @@ test: add unit tests for auth middleware
 - Rate limiting enhancements
 
 ### Code Quality
+
 - Clean, readable code
 - Proper error handling
 - Input validation
@@ -115,9 +125,11 @@ When creating a PR, please include:
 
 ```markdown
 ## Description
+
 Brief description of what this PR does
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
@@ -125,21 +137,25 @@ Brief description of what this PR does
 - [ ] Performance improvement
 
 ## Testing
+
 - [ ] Ran `pnpm format` before submitting
 - [ ] All tests pass (`pnpm test`)
 - [ ] Tested manually in development
 - [ ] No breaking changes
 
 ## Screenshots (if applicable)
+
 Add screenshots for UI changes
 
 ## Additional Notes
+
 Any additional context or considerations
 ```
 
 ## 🎉 Recognition
 
 All contributors will be:
+
 - Added to the contributors list
 - Credited in release notes
 - Mentioned in project documentation

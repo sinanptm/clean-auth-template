@@ -59,7 +59,7 @@ const Navbar = () => {
           </Button>
         ) : (
           <Link href="/admin/auth" prefetch={false}>
-              <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm">
               Admin Sign In
             </Button>
           </Link>
@@ -84,12 +84,12 @@ const Navbar = () => {
         ) : (
           <>
             <Link href="/auth" prefetch={false}>
-                <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm">
                 Sign In
               </Button>
             </Link>
             <Link href="/auth/signup" prefetch={false}>
-                <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm">
                 Sign Up
               </Button>
             </Link>

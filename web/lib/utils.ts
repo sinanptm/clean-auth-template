@@ -50,8 +50,7 @@ export const onError = (error: Error) => {
  * @param role - The role of the user (Admin or User).
  * @returns The token key string corresponding to the role.
  */
-export const getTokenKey = (role: UserRole) =>
-  role === UserRole.Admin ? Tokens.Admin : Tokens.User;
+export const getTokenKey = (role: UserRole) => (role === UserRole.Admin ? Tokens.Admin : Tokens.User);
 
 /**
  * @param role - The role of the user (UserRole.Admin or UserRole.User) whose authentication data will be cleared.
