@@ -21,7 +21,9 @@ This comprehensive full-stack authentication template is designed with clean arc
 **📚 Documentation**: [https://clean-auth-template.vercel.app](https://clean-auth-template.vercel.app/) <br />
 **🛠️ CLI Tool**:  [https://npmjs.com/package/clean-auth](https://www.npmjs.com/package/clean-auth)
 
-<img src="https://github.com/user-attachments/assets/cbbfc5f3-c470-4426-a823-aaf796607203" alt="Application Preview" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+<img src="https://github.com/user-attachments/assets/efdc2095-d663-4b66-bea9-33a1190c302b" alt="Application Preview Dark" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+<img src="https://github.com/user-attachments/assets/487c4a48-c394-499f-b21f-eefec2250496" alt="Application Preview Light" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
 
 The template demonstrates modern web development practices with a focus on security, scalability, and maintainability. It includes comprehensive authentication flows, role-based access control, and production-ready deployment configurations.
 
@@ -154,12 +156,12 @@ clean-auth help
 <summary><strong>
 📱 Application Screenshots
 </strong></summary>
-
+    
 ### Authentication Flow
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
 
 **User Registration**
-<img src="https://github.com/user-attachments/assets/a91bfc8b-ebf1-46f9-b783-1382f09489b3" alt="User Signup Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+<img src="https://github.com/user-attachments/assets/c2178cd3-0e27-480d-8bb9-997a1f42d2da" alt="User Signup Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 
 **Forgot Password Modal**
 <img src="https://github.com/user-attachments/assets/c427b1fd-53d6-4cff-a5c3-9633e3056716" alt="Forgot Password Popup" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
