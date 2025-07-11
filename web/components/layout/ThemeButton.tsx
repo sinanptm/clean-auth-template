@@ -21,12 +21,12 @@ const ThemeButton = () => {
             >
                 <MoonIcon
                     size={16}
-                    className="shrink-0 scale-0 opacity-0 transition-all dark:scale-100 group-dark:opacity-100"
+                    className="shrink-0 scale-0 opacity-0 transition-all dark:scale-100 dark:opacity-100"
                     aria-hidden="true"
                 />
                 <SunIcon
                     size={16}
-                    className="absolute shrink-0 scale-100 opacity-100 transition-all group-dark:scale-0 group-dark:opacity-0"
+                    className="absolute shrink-0 scale-100 opacity-100 transition-all dark:scale-0 dark:opacity-0"
                     aria-hidden="true"
                 />
             </Toggle>
