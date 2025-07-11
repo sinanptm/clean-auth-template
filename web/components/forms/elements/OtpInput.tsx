@@ -13,6 +13,20 @@ interface CustomOTPInputProps extends BaseFormFieldProps {
   disabled?: boolean;
 }
 
+/**
+ * Renders an OTP (One-Time Password) input field, integrated with a wrapper for a consistent
+ * form field layout. It allows users to input a multi-digit code with visual feedback.
+ *
+ * @param {CustomOTPInputProps} props - The props for the component.
+ * @param {number} [props.maxLength=6] - The maximum number of digits for the OTP.
+ * @param {string} [props.value] - The controlled value of the OTP input.
+ * @param {(value: string) => void} [props.onChange] - Callback fired when the OTP value changes.
+ * @param {boolean} [props.disabled] - If true, the OTP input will be disabled.
+ * @param {string} [props.label] - The label displayed for the OTP input.
+ * @param {string} [props.description] - A short description displayed below the label.
+ * @param {string} [props.error] - An error message to display, indicating a validation error.
+ * @param {string} [props.className] - Additional CSS classes to apply to the component.
+ */
 const CustomOTPInput = ({
   maxLength = 6,
   value,

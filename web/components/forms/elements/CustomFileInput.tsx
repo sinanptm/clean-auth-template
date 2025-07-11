@@ -4,14 +4,26 @@ import { cn } from "@/lib/utils";
 import FormFieldWrapper from "./FormFieldWrapper";
 import { BaseFormFieldProps } from "@/types";
 
-interface CustomFileInputProps
-  extends BaseFormFieldProps,
-    Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+interface CustomFileInputProps extends BaseFormFieldProps, Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   maxSize?: number;
   allowedTypes?: string[];
   showPreview?: boolean;
 }
 
+/**
+ * Renders a file input with drag-and-drop support, integrated with a
+ * wrapper for a consistent form field layout.
+ *
+ * @param {CustomFileInputProps} props - The props for the component.
+ * @param {boolean} [props.showPreview=true] - If true, displays a preview of the selected files.
+ * @param {number} [props.maxSize] - The maximum allowed file size in megabytes.
+ * @param {string[]} [props.allowedTypes] - An array of allowed file MIME types.
+ * @param {string} [props.label] - The label displayed for the file input.
+ * @param {string} [props.description] - A short description displayed below the label.
+ * @param {string} [props.error] - An error message to display, indicating a validation error.
+ * @param {boolean} [props.disabled] - If true, the file input will be disabled.
+ * @param {string} [props.className] - Additional CSS classes to apply to the component.
+ */
 const CustomFileInput = ({
   showPreview = true,
   onChange,

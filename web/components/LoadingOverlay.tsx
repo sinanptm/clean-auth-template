@@ -8,6 +8,33 @@ interface LoadingOverlayProps {
   loading?: boolean;
 }
 
+/**
+ * A full-screen loading overlay component that displays a visual loading animation.
+ * It can be triggered by an internal global loading state (managed by `useIsLoading` hook)
+ * or by an external `loading` prop. When active, it prevents scrolling on the body.
+ *
+ * @component
+ * @param {LoadingOverlayProps} props - The props for the LoadingOverlay component.
+ * @param {boolean} [props.loading=false] - An optional boolean to explicitly control the loading state.
+ *   If true, the overlay will be shown. This prop is combined with the global loading state.
+ *
+ * @returns {JSX.Element | null} The loading overlay component or null if not loading.
+ *
+ * @example
+ * To use with global loading state (e.g., from API calls):
+ * <LoadingOverlay loading />
+ *
+ * @example
+ * To use with a specific component's loading state:
+ * const [componentLoading, setComponentLoading] = useState(false);
+ * ... some async operation
+ * <LoadingOverlay loading={componentLoading} />
+ *
+ * @remarks
+ * This component uses `framer-motion` for smooth entry and exit animations.
+ * It also modifies the `document.body.style.overflow` to `hidden` when loading
+ * to prevent scrolling, and restores it to `unset` when loading finishes or the component unmounts.
+ */
 const LoadingOverlay = ({ loading = false }: LoadingOverlayProps) => {
   const globalLoading = useIsLoading((state) => state.isLoading);
   const isLoading = globalLoading || loading;

@@ -13,9 +13,7 @@ export interface Option {
   value: string;
   label?: string;
   disable?: boolean;
-  /** fixed option that can't be removed. */
   fixed?: boolean;
-  /** Group the options by providing key. */
   [key: string]: string | boolean | undefined;
 }
 
@@ -185,6 +183,39 @@ const CommandEmpty = React.memo(
 
 CommandEmpty.displayName = "CommandEmpty";
 
+/**
+ * A versatile multiple selection component that allows users to select multiple options
+ * from a dropdown, with support for searching, grouping, and creating new options.
+ *
+ * @param {MultipleSelectorProps} props - The props for the component.
+ * @param {Option[]} [props.value] - The controlled array of selected options.
+ * @param {Option[]} [props.defaultOptions] - Initial options for uncontrolled usage.
+ * @param {Option[] | string[] | { value: string; label: string; disabled?: boolean }[]} [props.options] - Available options for selection.
+ * @param {string} [props.placeholder] - Text displayed when no options are selected.
+ * @param {React.ReactNode} [props.loadingIndicator] - Custom loading indicator component.
+ * @param {React.ReactNode} [props.emptyIndicator] - Custom empty state indicator component.
+ * @param {number} [props.delay] - Debounce time for async search in milliseconds.
+ * @param {boolean} [props.triggerSearchOnFocus] - If true, triggers search when the input is focused.
+ * @param {(value: string) => Promise<Option[]>} [props.onSearch] - Async function to fetch options based on search input.
+ * @param {(value: string) => Option[]} [props.onSearchSync] - Sync function to filter options based on search input.
+ * @param {(options: Option[]) => void} [props.onChange] - Callback fired when the selected options change.
+ * @param {(values: string[]) => void} [props.onValueChange] - Callback fired with an array of selected option values.
+ * @param {number} [props.maxSelected] - Maximum number of options that can be selected.
+ * @param {(maxLimit: number) => void} [props.onMaxSelected] - Callback when the maximum selection limit is reached.
+ * @param {boolean} [props.hidePlaceholderWhenSelected] - If true, hides the placeholder when options are selected.
+ * @param {boolean} [props.disabled] - If true, the component will be disabled.
+ * @param {string} [props.groupBy] - Key to group options by.
+ * @param {string} [props.className] - Additional CSS classes for the component container.
+ * @param {string} [props.badgeClassName] - Additional CSS classes for selected option badges.
+ * @param {boolean} [props.selectFirstItem=true] - If true, the first item in the dropdown is selected by default.
+ * @param {boolean} [props.creatable] - If true, allows creating new options if no match is found.
+ * @param {React.ComponentPropsWithoutRef<typeof Command>} [props.commandProps] - Props passed to the internal Command component.
+ * @param {Omit<React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>, "value" | "placeholder" | "disabled">} [props.inputProps] - Props passed to the internal CommandInput component.
+ * @param {boolean} [props.hideClearAllButton] - If true, hides the clear all button.
+ * @param {string} [props.emptyText] - Custom text to display when no options are found.
+ * @param {string} [props.loadingText] - Custom text to display while loading options.
+ * @param {boolean} [props.searchable] - If true, enables search functionality.
+ */
 const MultipleSelector = React.forwardRef<HTMLInputElement, MultipleSelectorProps>(
   (
     {

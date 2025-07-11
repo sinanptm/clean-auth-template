@@ -14,7 +14,18 @@ interface SubmitButtonProps {
   [key: string]: any;
 }
 
-const SubmitButton: React.FC<SubmitButtonProps> = ({
+/**
+ * Renders a submit button that can display a loading spinner and be disabled.
+ *
+ * @param {SubmitButtonProps} props - The props for the component.
+ * @param {boolean} [props.isLoading=false] - If true, a loading spinner is shown and the button is disabled.
+ * @param {boolean} [props.disabled=false] - If true, the button is disabled.
+ * @param {React.ReactNode} [props.children="Submit"] - The content to display inside the button.
+ * @param {(event: React.MouseEvent<HTMLButtonElement>) => void} [props.onClick] - Callback fired when the button is clicked.
+ * @param {"submit" | "button" | "reset"} [props.type="submit"] - The type of the button.
+ * @param {string} [props.className] - Additional CSS classes to apply to the button.
+ */
+const SubmitButton = ({
   isLoading = false,
   disabled = false,
   children = "Submit",
@@ -22,7 +33,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   type = "submit",
   className,
   ...props
-}) => {
+}: SubmitButtonProps) => {
   return (
     <Button
       type={type}

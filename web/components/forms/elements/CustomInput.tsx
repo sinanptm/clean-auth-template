@@ -7,6 +7,18 @@ import { BaseFormFieldProps } from "@/types";
 
 interface CustomInputProps extends BaseFormFieldProps, React.InputHTMLAttributes<HTMLInputElement> {}
 
+/**
+ * Renders a standard input field, integrated with a wrapper for a consistent
+ * form field layout. It also includes a visibility toggle for password fields.
+ *
+ * @param {CustomInputProps} props - The props for the component.
+ * @param {string} [props.type="text"] - The type of the input (e.g., "text", "password", "email").
+ * @param {string} [props.label] - The label displayed for the input.
+ * @param {string} [props.description] - A short description displayed below the label.
+ * @param {string} [props.error] - An error message to display, indicating a validation error.
+ * @param {boolean} [props.disabled] - If true, the input will be disabled.
+ * @param {string} [props.className] - Additional CSS classes to apply to the input.
+ */
 const CustomInput = ({ type, ...props }: CustomInputProps) => {
   const [showPassword, setShowPassword] = useState(false);
   // eslint-disable-next-line
