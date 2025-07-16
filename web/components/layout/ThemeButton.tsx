@@ -12,7 +12,8 @@ const ThemeButton = () => {
     <div>
       <Toggle
         variant="outline"
-        className="group dark:hover:bg-muted size-9 dark:bg-transparent"
+        size={'sm'}
+        className="group dark:hover:bg-muted dark:bg-transparent"
         pressed={theme === "dark"}
         onPressedChange={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
         aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
